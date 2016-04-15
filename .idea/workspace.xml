@@ -2,16 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="32f22cca-931e-4a4c-a52e-d090d120e88d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/CMS/PDF/Cat1/chemical weopns.jpeg" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/bootstrap/css/pestproof.css" afterPath="$PROJECT_DIR$/Assets/bootstrap/css/pestproof.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/bootstrap/js/jquery.js" afterPath="$PROJECT_DIR$/Assets/bootstrap/js/jquery.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMS/Login/loginFunc.php" afterPath="$PROJECT_DIR$/CMS/Login/loginFunc.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMS/Login/logoutFunc.php" afterPath="$PROJECT_DIR$/CMS/Login/logoutFunc.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMS/PDF/PDF.php" afterPath="$PROJECT_DIR$/CMS/PDF/PDF.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMS/adminPanel.php" afterPath="$PROJECT_DIR$/CMS/adminPanel.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMS/nav.php" afterPath="$PROJECT_DIR$/CMS/nav.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMS/dbConfig.php" afterPath="$PROJECT_DIR$/CMS/dbConfig.php" />
     </list>
     <ignored path="html.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -36,11 +31,23 @@
       <file leaf-file-name="PDF.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/CMS/PDF/PDF.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4054054">
-              <caret line="124" column="29" selection-start-line="116" selection-start-column="0" selection-end-line="133" selection-end-column="16" />
+            <state vertical-scroll-proportion="0.42628774">
+              <caret line="100" column="8" selection-start-line="100" selection-start-column="8" selection-end-line="100" selection-end-column="8" />
               <folding>
                 <element signature="e#6#84#0#PHP" expanded="true" />
+                <marker date="1460719367679" expanded="true" signature="4513:4572" placeholder="INSERT INTO PDF... " />
+                <marker date="1460719367679" expanded="true" signature="4513:4637" placeholder="INSERT INTO MyGuests... " />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dbConfig.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CMS/dbConfig.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-18.75">
+              <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -48,33 +55,13 @@
       <file leaf-file-name="adminPanel.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CMS/adminPanel.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="85" column="33" selection-start-line="83" selection-start-column="12" selection-end-line="99" selection-end-column="21" />
+            <state vertical-scroll-proportion="-12.5">
+              <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
               <folding>
                 <element signature="e#10#88#0#PHP" expanded="true" />
-                <marker date="1460640952841" expanded="true" signature="2936:2957" placeholder="..." />
-                <marker date="1460640952841" expanded="true" signature="2936:2973" placeholder="..." />
+                <marker date="1460710805907" expanded="true" signature="2836:2857" placeholder="..." />
+                <marker date="1460710805907" expanded="true" signature="2836:2873" placeholder="..." />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="loginFunc.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CMS/Login/loginFunc.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="16" column="10" selection-start-line="16" selection-start-column="10" selection-end-line="16" selection-end-column="10" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pestproof.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/bootstrap/css/pestproof.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="250" column="1" selection-start-line="250" selection-start-column="1" selection-end-line="250" selection-end-column="1" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -87,7 +74,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/pestproof/CMS/upload.php" />
         <option value="$PROJECT_DIR$/pestproof/CMS/Auth.php" />
         <option value="$PROJECT_DIR$/pestproof/CMS/loginForm.php" />
         <option value="$PROJECT_DIR$/pestproof/AdminPanel/conn.php" />
@@ -136,6 +122,7 @@
         <option value="$PROJECT_DIR$/Assets/bootstrap/js/jquery.js" />
         <option value="$PROJECT_DIR$/Assets/bootstrap/css/pestproof.css" />
         <option value="$PROJECT_DIR$/CMS/Login/loginFunc.php" />
+        <option value="$PROJECT_DIR$/CMS/dbConfig.php" />
         <option value="$PROJECT_DIR$/CMS/adminPanel.php" />
         <option value="$PROJECT_DIR$/CMS/PDF/PDF.php" />
       </list>
@@ -182,8 +169,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -254,6 +239,8 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -379,7 +366,7 @@
           <option name="timeStamp" value="9" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="11" />
+      <option name="time" value="13" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -390,6 +377,8 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#6#84#0#PHP" expanded="true" />
+            <marker date="1460719367679" expanded="true" signature="4513:4572" placeholder="INSERT INTO PDF... " />
+            <marker date="1460719367679" expanded="true" signature="4513:4637" placeholder="INSERT INTO MyGuests... " />
           </folding>
         </state>
       </provider>
@@ -400,8 +389,8 @@
           <caret line="85" column="33" selection-start-line="83" selection-start-column="12" selection-end-line="99" selection-end-column="21" />
           <folding>
             <element signature="e#10#88#0#PHP" expanded="true" />
-            <marker date="1460640952841" expanded="true" signature="2936:2957" placeholder="..." />
-            <marker date="1460640952841" expanded="true" signature="2936:2973" placeholder="..." />
+            <marker date="1460710805907" expanded="true" signature="2836:2857" placeholder="..." />
+            <marker date="1460710805907" expanded="true" signature="2836:2873" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -428,6 +417,88 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#6#84#0#PHP" expanded="true" />
+            <marker date="1460719367679" expanded="true" signature="4513:4572" placeholder="INSERT INTO PDF... " />
+            <marker date="1460719367679" expanded="true" signature="4513:4637" placeholder="INSERT INTO MyGuests... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMS/adminPanel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="85" column="33" selection-start-line="83" selection-start-column="12" selection-end-line="99" selection-end-column="21" />
+          <folding>
+            <element signature="e#10#88#0#PHP" expanded="true" />
+            <marker date="1460710805907" expanded="true" signature="2836:2857" placeholder="..." />
+            <marker date="1460710805907" expanded="true" signature="2836:2873" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMS/Login/loginFunc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="16" column="10" selection-start-line="16" selection-start-column="10" selection-end-line="16" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/bootstrap/css/pestproof.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="250" column="1" selection-start-line="250" selection-start-column="1" selection-end-line="250" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMS/PDF/PDF.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#6#84#0#PHP" expanded="true" />
+            <marker date="1460719367679" expanded="true" signature="4513:4572" placeholder="INSERT INTO PDF... " />
+            <marker date="1460719367679" expanded="true" signature="4513:4637" placeholder="INSERT INTO MyGuests... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMS/adminPanel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="85" column="33" selection-start-line="83" selection-start-column="12" selection-end-line="99" selection-end-column="21" />
+          <folding>
+            <element signature="e#10#88#0#PHP" expanded="true" />
+            <marker date="1460710805907" expanded="true" signature="2836:2857" placeholder="..." />
+            <marker date="1460710805907" expanded="true" signature="2836:2873" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMS/Login/loginFunc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="16" column="10" selection-start-line="16" selection-start-column="10" selection-end-line="16" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/bootstrap/css/pestproof.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="250" column="1" selection-start-line="250" selection-start-column="1" selection-end-line="250" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMS/PDF/PDF.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#6#84#0#PHP" expanded="true" />
+            <marker date="1460719367679" expanded="true" signature="4513:4572" placeholder="INSERT INTO PDF... " />
+            <marker date="1460719367679" expanded="true" signature="4513:4637" placeholder="INSERT INTO MyGuests... " />
           </folding>
         </state>
       </provider>
@@ -438,8 +509,8 @@
           <caret line="46" column="16" selection-start-line="46" selection-start-column="16" selection-end-line="46" selection-end-column="16" />
           <folding>
             <element signature="e#10#88#0#PHP" expanded="true" />
-            <marker date="1460640952841" expanded="true" signature="2936:2957" placeholder="..." />
-            <marker date="1460640952841" expanded="true" signature="2936:2973" placeholder="..." />
+            <marker date="1460710805907" expanded="true" signature="2836:2857" placeholder="..." />
+            <marker date="1460710805907" expanded="true" signature="2836:2873" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -455,13 +526,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CMS/footer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-23.416666">
-          <caret line="58" column="0" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -536,13 +600,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CMS/dbConfig.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.375">
-          <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/CMS/Login/loginFunc.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -551,24 +608,42 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/CMS/footer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-21.291666">
+          <caret line="58" column="0" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMS/dbConfig.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-18.75">
+          <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/CMS/adminPanel.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="85" column="33" selection-start-line="83" selection-start-column="12" selection-end-line="99" selection-end-column="21" />
+        <state vertical-scroll-proportion="-12.5">
+          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
           <folding>
             <element signature="e#10#88#0#PHP" expanded="true" />
-            <marker date="1460640952841" expanded="true" signature="2936:2957" placeholder="..." />
-            <marker date="1460640952841" expanded="true" signature="2936:2973" placeholder="..." />
+            <marker date="1460710805907" expanded="true" signature="2836:2857" placeholder="..." />
+            <marker date="1460710805907" expanded="true" signature="2836:2873" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/CMS/PDF/PDF.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4054054">
-          <caret line="124" column="29" selection-start-line="116" selection-start-column="0" selection-end-line="133" selection-end-column="16" />
+        <state vertical-scroll-proportion="0.42628774">
+          <caret line="100" column="8" selection-start-line="100" selection-start-column="8" selection-end-line="100" selection-end-column="8" />
           <folding>
             <element signature="e#6#84#0#PHP" expanded="true" />
+            <marker date="1460719367679" expanded="true" signature="4513:4572" placeholder="INSERT INTO PDF... " />
+            <marker date="1460719367679" expanded="true" signature="4513:4637" placeholder="INSERT INTO MyGuests... " />
           </folding>
         </state>
       </provider>

@@ -12,18 +12,12 @@
     session_start();
 
 
-
 require "nav.php";
-require "dbConfig.php";
+//require "dbConfig.php";
 require "Login/loginFunc.php";
 require "Login/logoutFunc.php";
 require "PDF/PDF.php";
 
-
-
-//connect to DB
-$conn = new dbconfig();
-$conn = $conn->connect();
 
 //new loginFunc instance
 $logFunc = new loginFunc();
@@ -52,10 +46,38 @@ $logFunc = new loginFunc();
                 </div>
             <br>
                 <div class="input-group">
-                    <span class="input-group-addon" id="Info">Information &g </span>
+                    <span class="input-group-addon" id="Info">Information</span>
                     <input class="form-control" type="text" name="Info" placeholder="Info"/>
                 </div>
             <br>
+
+
+
+                <div class="input-group">
+                    <span class="input-group-addon" id="Cat">Category</span>
+                    <select class="form-control" name="Cat">
+
+                        <?php
+                        //set variable as array produced from CatArrayF()
+                        $CatArray = CatArrayF();
+
+                        //count the 10 array objects
+                        for ($a1 = 0; $a1 < 10; $a1++) {
+                            //count the vars in inner array
+                            for ($row = 1; $row < 2; $row++) {
+                                var_dump($CatArray[$a1][$row]);
+
+                                echo "<option name='".$CatArray[$a1][$row]."' value='".$CatArray[$a1][$row]."'>".$CatArray[$a1][$row]."</option>";
+
+                                //close for row
+                            }
+                            //close for a1
+                        }
+                        ?>
+                    </select>
+                </div>
+
+                <br>
 
                 <div class="input-group">
                 <span class="input-group-btn">
@@ -65,43 +87,7 @@ $logFunc = new loginFunc();
                 </span>
                 </div>
 
-            <br>
 
-                <div class="input-group">
-                    <span class="input-group-addon" id="Cat">Category</span>
-                    <select class="form-control" name="Cat">
-
-                        <?php
-
-
-
-
-                        $CatArray = CatArrayF();
-
-
-
-                    //count the 10 array objects
-                    for ($a1 = 0; $a1 < 10; $a1++) {
-                        //count the vars in inner array
-                        for ($row = 1; $row < 2; $row++) {
-                            var_dump($CatArray[$a1][$row]);
-                           // for ($col = 0; $col < 10; $col++) {
-
-
-                                echo "<option name='".$CatArray[$a1][$row]."' value='".$CatArray[$a1][$row]."'>".$CatArray[$a1][$row]."</option>";
-
-
-
-                            //close for col
-                           //}
-                        //close for row
-                        }
-                    //close for a1
-                    }
-
-                        ?>
-                        </select>
-                </div>
 
             <br>
 

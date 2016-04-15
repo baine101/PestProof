@@ -7,35 +7,31 @@
  */
 
 
-
 ini_set('display_errors', 'On');
 error_reporting(E_ALL);
+include "../dbConfig.php";
 
-
-
-$target_dir = "Cat1/";
+//set variables used for file upload
+$target_dir = "";
 $target_file ="";
 $target_file = $target_dir . basename($_FILES["UpPDF"]["name"]);
 $uploadOk = 1;
 $FileType = pathinfo($target_file,PATHINFO_EXTENSION);
 
-
-
-
-
+$targetWithoutExt = str_replace(' ', '_', $target_file);
 
 //validates and stores files
-function UPValiate()
+function upload()
 {
 
-    global $target_dir, $target_file , $uploadOk ,$FileType;
+    global $target_dir, $target_file , $uploadOk ,$FileType ,$targetWithoutExt;
 
 
     // Check if file already exists
     if (file_exists($target_file)) {
         echo "Sorry, file already exists.";
         $uploadOk = 0;
-    //close if file_exists
+        //close if file_exists
     }else{
 
 //************************************
@@ -48,28 +44,28 @@ function UPValiate()
                 echo "Sorry, only JPG, JPEG and PDF files are allowed.";
                 $uploadOk = 0;
             }
-        //close if uploadOk = 1
+            //close if uploadOk = 1
         }
 
 //************************************
         // Check if $uploadOk is set to 0 by an error
         if ($uploadOk == 0) {
             echo "Sorry, your file was not uploaded.";
-// if everything is ok, try to upload file
+            // if everything is ok run upload func
         } else
         {
-            if (move_uploaded_file($_FILES["UpPDF"]["tmp_name"], $target_file)) {
+
+            if (move_uploaded_file($_FILES["UpPDF"]["tmp_name"], $targetWithoutExt)) {
                 echo "The file ". basename( $_FILES["UpPDF"]["name"]). " has been uploaded.";
+                PDF::insert();
             } else
             {
                 echo "Sorry, there was an error uploading your file.";
-            //close if move uploaded file
+                //close if move uploaded file
             }
         }
 
-
-
-    //close if file exists
+        //close if file exists
     }
 
 //close UPValidate Func
@@ -87,14 +83,14 @@ function UPValiate()
                          ["HSEP" , "Health & Safety and Environment Policy"],
                          ["TrainDocs" , "Training Documents"],
                          ["Certs" , "Certificates"],
-                         ["Stationary" , "Statonary"],
+                         ["Stationary" , "Stationary"],
                          ["PestSum" , "Pesticide Summary"],
                          ["PestFact" , "Pesticide Facts Sheets"]
-                         );
+                        );
 
 
             return $CatArray;
-
+    //close CatArrayF function
     }
 
 
@@ -102,45 +98,89 @@ function UPValiate()
     {
 
         public $Category;
-        public $CS;
+        
 
-        public static function Upload()
+        public static function insert()
         {
+            global $target_dir, $target_file , $uploadOk ,$FileType;
+
             //new instance of CatarrayF function
-            $CatArray = CatArrayF();
+            $catArray = CatArrayF();
 
-            //run UPValidate - validates and stores file
-            UPValiate();
-
-
+            $UploadFileName = $_FILES['UpPDF']['name'];
+            $catSelect = $_POST['Cat'];
+            echo"<br>";
             echo"<br>";
 
             //count
-            for ($i = 0; $i < 1; $i++) {
-                for($v =0; $v <10; $v++){
+            for ($i = 0; $i < 10; $i++) {
 
-                        $CatArrayV = $CatArray[$v];
+                $CatSear = array_search($catSelect, $catArray[$i]);
 
-                    var_dump($CatArrayV);
-                    echo "<br>";
-                        //get array id from value
-                        //$arrayKey=array_search('', array_column($CatArray, ''));
+                if($CatSear == true){
+
+                    //get array value (ie:"SSOF") from index number
+                    $category = $catArray[$i][0];
+                    //set file path to place file
+                    $target_dir = "Category/".$category ."/";
+                    $target_file = $target_dir . basename($_FILES["UpPDF"]["name"]);
+                    //set post values for DB
+                    $title = $_POST['Title'];
+                    $info = $_POST['Info'];
+
+                    $FE = new SplFileInfo($_FILES["UpPDF"]["name"]);
+                    $fileExt= $FE->getExtension();
+
+                    $targetWithoutExt = preg_replace('/\\.[^.\\s]{3,4}$/', '', $target_file);
+                    $targetWithoutExt = str_replace(' ', '_', $targetWithoutExt);
+
+
+                    //code here **********************************
+
+
+                    //connect to DB
+                    $conn = new dbconfig();
+                    $conn = $conn->connect();
+
+                    $sql= "";
+
+
+                    try {
+                        $conn = new PDO("mysql:host=localhost;dbname=Pestproof", 'baine101', 'blink182');
+                        // set the PDO error mode to exception
+                        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+                        $sql = "INSERT INTO PDF (Title, Info, Cat, Path, Filetype) VALUES ( '$title', '$info', '$category', '$targetWithoutExt', '$fileExt')";
+                        //$sql->bindParam(':title', $title);
+                        //$sql->bindParam(':info', $info);
+                        //$sql->bindParam(':category', $category);
+                        //$sql->bindParam(':targetWithoutExt', $targetWithoutExt);
+                        //$sql->bindParam(':fileExt', $fileExt);
+
+
+                        // use exec() because no results are returned
+                        $conn->exec($sql);
+
+                        echo "New record created successfully";
+                    }
+                    catch(PDOException $e)
+                    {
+                        echo $sql . "<br>fail:" . $e->getMessage();
+                    }
 
 
 
-                //close for $v
+
+
+
+
+                    break;
+                //close if $key = true
                 }
-                //close for $a1
+               //close for $a1
                }
 
-
-
-
-
-
-
-            return true;
-            //close Upload Func
+            //return true;
+        //close Upload Func
         }
 
         public static function Edit()
@@ -171,7 +211,7 @@ $PDF = new PDF;
 
 if(isset($_POST['Upload'])){
 
-    PDF::Upload();
+    PDF::insert();
 }
 
 
