@@ -59,15 +59,15 @@ $logFunc = new loginFunc();
 
                         <?php
                         //set variable as array produced from CatArrayF()
-                        $CatArray = CatArrayF();
+                        $catArray =  CatArrayF();
 
                         //count the 10 array objects
                         for ($a1 = 0; $a1 < 10; $a1++) {
                             //count the vars in inner array
                             for ($row = 1; $row < 2; $row++) {
-                                var_dump($CatArray[$a1][$row]);
+                                var_dump($catArray[$a1][$row]);
 
-                                echo "<option name='".$CatArray[$a1][$row]."' value='".$CatArray[$a1][$row]."'>".$CatArray[$a1][$row]."</option>";
+                                echo "<option name='".$catArray[$a1][0]."' value='".$catArray[$a1][0]."'>".$catArray[$a1][1]."</option>";
 
                                 //close for row
                             }

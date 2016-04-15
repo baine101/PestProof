@@ -6,6 +6,7 @@
  * Time: 00:14
  */
 require "nav.php";
+require "PDF/PDF.php";
 ?>
 
 <!-- headding image-->
@@ -34,9 +35,7 @@ require "nav.php";
 
 
 <!-- heading -->
-<?php
-
-?>
+<?php PDF::PDFList()?>
 
 
 
