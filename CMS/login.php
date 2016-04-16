@@ -15,9 +15,7 @@ require "Login/loginFunc.php";
 require  "Login/loginCheck.php";
 
 //DB connect
-$conn = new dbconfig();
-$conn->connect();
-
+//dbconnect\dbconfig::connect();
 
 //new instance of loginCheck : check if logged in
 $loginCheck = new loginCheck();

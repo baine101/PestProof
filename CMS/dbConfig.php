@@ -5,7 +5,7 @@
  * Date: 11/04/16
  * Time: 14:44
 */
-namespace dbconnect;
+namespace dbconnect\dbconnect;
 
 // define("",$DB_DSN);
 // $DB_USERNAME;
@@ -14,6 +14,8 @@ namespace dbconnect;
 //$ADMIN_USER;
 // $ADMIN_PASSWORD;
 // $DB;
+define("ADMIN_USER", "admin");
+define("ADMIN_PASSWORD", "mypass");
 class dbconfig
 {
 
@@ -28,8 +30,7 @@ class dbconfig
         $DB = new PDO("mysql:host=$DB_DSN;dbname=$DB_NAME", $DB_USERNAME, $DB_PASSWORD);
         $DB->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         //admin panel login
-        define("ADMIN_USER", "admin");
-        define("ADMIN_PASSWORD", "mypass");
+
         // define("ADMIN_PASSWORD", "a029d0df84eb5549c641e04a9ef389e5");
 
         return true;
