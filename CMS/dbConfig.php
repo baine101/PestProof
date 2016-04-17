@@ -5,7 +5,7 @@
  * Date: 11/04/16
  * Time: 14:44
 */
-namespace dbconnect\dbconnect;
+namespace dbconnect;
 
 // define("",$DB_DSN);
 // $DB_USERNAME;

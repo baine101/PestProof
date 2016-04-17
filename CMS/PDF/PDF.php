@@ -5,7 +5,7 @@
  * Date: 12/04/16
  * Time: 16:07
  */
-//use dbconnect\dbconnect;
+
 
 ini_set('display_errors', 'On');
 error_reporting(E_ALL);
@@ -59,32 +59,54 @@ $fileType = pathinfo($targetFile,PATHINFO_EXTENSION);
     public static function upload()
     {
 
-        global $targetDir, $targetFile , $uploadOk ,$fileType ,$targetNospace;
+        global $category, $targetDir, $targetFile , $uploadOk ,$fileType ,$targetNospace;
 
+        //declare catArray as CatArray function
+        $catArray = CatArrayF();
+
+        //count category values : ID & Values
+          for ($i = 0; $i < 10; $i++) {
+               //if the array matches the selected category stop the loop
+               if($catArray[$i][0] == $_POST['Cat']) {
+                   //get array value (ie:"SSOF") from index number
+                   $category = $catArray[$i][0];
+               break;
+               }
+            //close for categorgy count loop
+            }
+        //set variables used for file upload
+        $targetDir = "Category/".$category ."/";
+        $targetFile ="";
+        $targetFile = $targetDir . basename($_FILES["UpPDF"]["name"]);
         $targetNospace = str_replace(' ', '_', $targetFile);
 
-        // Check if file already exists
-        if (file_exists($targetFile)) {
-            echo "Sorry, file already exists.";
-            $uploadOk = 0;
 
-            return false;
-            //close if file_exists
-        }else{
 
-//************************************
+        $uploadOk = 1;
+        $fileType = pathinfo($targetFile,PATHINFO_EXTENSION);
+//************************************/
+      /*
+        echo "<br>";
+        var_dump($_FILES["UpPDF"]["name"]);
+        echo "<br>";
+        var_dump($targetNospace);
+        echo "<br>";
+        echo "target dir:";
+        echo "<br>";
+        var_dump($targetDir);
+        echo "<br>";
+    */
+//************************************/
             //check file extension
             if($uploadOk = 1)
             {
 
                 // Allow certain file formats
                 if($fileType != "jpg" && $fileType != "jpeg" && $fileType != "PDF") {
-                    echo "Sorry, only JPG, JPEG and PDF files are allowed.";
-                    echo "<br>";
-                    var_dump($targetNospace);
-                    $uploadOk = 0;
+                    echo "Sorry, only JPG, JPEG and PDF files are allowed to";
 
-                    return false;
+                    $uploadOk = 0;
+                   // return false;
                 }
                 //close if uploadOk = 1
             }
@@ -93,34 +115,38 @@ $fileType = pathinfo($targetFile,PATHINFO_EXTENSION);
             // Check if $uploadOk is set to 0 by an error
             if ($uploadOk == 0) {
                 echo "Sorry, your file was not uploaded.";
-               return false;
+
+
+                //    return false;
                 // if everything is ok run upload func
             } else
             {
 
                 if (move_uploaded_file($_FILES["UpPDF"]["tmp_name"], $targetNospace)) {
-                    echo "The file ". basename( $_FILES["UpPDF"]["name"]). " has been uploaded.";
-                    return true;
+                    echo "The file ". basename( $_FILES["UpPDF"]["name"]). " has been uploaded to " .$_POST['Cat'] ."<br>";
+                  $uploadOk = 1;
+
+                   // return true;
                 } else
                 {
                     echo "Sorry, there was an error uploading your file.";
-                    return false;
-
+                  //  return false;
                     //close if move uploaded file
                 }
+            //close if file exists
             }
 
-            //close if file exists
+        //close UPValidate Func
         }
 
-//close UPValidate Func
-    }
+
 
 //***********************************************************************************************************************
         public static function insert()
         {
-            global $targetDir, $targetFile , $fileName;
-
+        global $uploadOk, $catSear;
+            //  $targetDir, $targetFile , $fileName ,
+           // var_dump($uploadOk);$category
             //new instance of CatarrayF function
             $catArray = CatArrayF();
 
@@ -129,27 +155,42 @@ $fileType = pathinfo($targetFile,PATHINFO_EXTENSION);
             echo"<br>";
             echo"<br>";
 
-            //count
+            //count category values : ID & Values
             for ($i = 0; $i < 10; $i++) {
 
-                $catSear = array_search($catSelect, $catArray[$i]);
+                //if the array matches the selected category stop the loop
+                if($catArray[$i][0] == $catSelect) {
+                    //get array value (ie:"SSOF") from index number
+                    //$category = $catArray[$i][0];
 
-                var_dump($catSear);
+                    //search inner array for selected Category name
+                    $catSear = array_search($catSelect, $catArray[$i]);
+                   echo "hello motherfucker";
+                    var_dump($catArray[$i]);
+                break;
+            }
+
 
                 echo "<br>";
                 if($catSear >= 0){
                     echo "ello";
+                    echo "<br>";
 
 
                     //get array value (ie:"SSOF") from index number
                    $category = $catArray[$i][0];
                     //set file path to place file
                     $targetDir = "Category/".$category ."/";
-                    $targetFile = $targetDir . basename($_FILES["UpPDF"]["name"]);
+                    $fileName = basename($_FILES["UpPDF"]["name"]);
+                    $targetFile = $targetDir . $fileName;
                     $fileName = basename($_FILES["UpPDF"]["name"]);
                     //set post values for DB
                     $title = $_POST['Title'];
                     $info = $_POST['Info'];
+
+                    echo "<br>";
+                    var_dump($fileName);
+                    echo "<br>";
 
                     //get file extension
                     $FE = new SplFileInfo($_FILES["UpPDF"]["name"]);
@@ -170,15 +211,25 @@ $fileType = pathinfo($targetFile,PATHINFO_EXTENSION);
                         $conn = new PDO("mysql:host=localhost;dbname=Pestproof", 'baine101', 'blink182');
                         // set the PDO error mode to exception
                         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
                         $sql = "INSERT INTO PDF (Title, Info, Cat, Path, FileName, Filetype) VALUES ( '$title', '$info', '$category', '$targetWithoutExt','$fileName' , '$fileExt')";
 
-                        if(PDF::upload() == true) {
+                       // if(PDF::upload() == true) {
+                           if($uploadOk == 1) {
 
-                            // use exec() because no results are returned
-                            $conn->exec($sql);
-                            echo "New record created successfully";
-                        //close if PDF::upload = true
-                        }
+                                PDF::upload();
+                               // use exec() because no results are returned
+                               $conn->exec($sql);
+                               echo "New record created successfully";
+
+                               return true;
+
+                           }else{
+
+                               //close if PDF::upload = true
+                      //}
+                               echo "nope";
+                           }
                     //close try
                     }
                     catch(PDOException $e)
@@ -193,9 +244,10 @@ $fileType = pathinfo($targetFile,PATHINFO_EXTENSION);
                }
 
 
-            //return true;
+            return true;
         //close Upload Func
         }
+
 //***********************************************************************************************************************
         public static function Edit()
         {
@@ -247,7 +299,6 @@ $fileType = pathinfo($targetFile,PATHINFO_EXTENSION);
 
                     //if their is a row in the DB then :
                     if ($sqlRowCount->rowCount() > 0) {
-                        var_dump($sqlRowCount->rowCount());
 
                         //real sql query that return all values in DB as array
                         $sql= "SELECT * FROM PDF WHERE Cat = '$ID'";
