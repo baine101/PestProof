@@ -1,13 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="32f22cca-931e-4a4c-a52e-d090d120e88d" name="Default" comment="Sunday 17/04/16 14:59 - List broken  ? - uplod/insert working">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CMS/PDF/Category/COSHH/chemical_weopns.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CMS/PDF/Category/Insurance/chemical_weopns.jpeg" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+    <list default="true" id="32f22cca-931e-4a4c-a52e-d090d120e88d" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMS/PDF/PDF.php" afterPath="$PROJECT_DIR$/CMS/PDF/PDF.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMS/dbConfig.php" afterPath="$PROJECT_DIR$/CMS/dbConfig.php" />
     </list>
     <ignored path="html.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -572,6 +567,13 @@
       <option name="number" value="Default" />
       <updated>1458506758395</updated>
     </task>
+    <task id="LOCAL-00001" summary="Sunday 17/04/16 14:59 - List broken  ? - uplod/insert working">
+      <created>1460901740892</created>
+      <option name="number" value="00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1460901740892</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
