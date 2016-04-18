@@ -14,13 +14,13 @@ class loginCheck
     public function Check()
     {
 
-        if(isset($_SESSION['username']) && isset($_SESSION['password']) )
+        if(!isset($_SESSION['username']) && !isset($_SESSION['password']) )
         {
-            header("location: adminPanel.php");
-            return true;
+            header("location: ../login.php");
+            return false;
         }
 
-
+    return false;
    //close func Check
     }
 

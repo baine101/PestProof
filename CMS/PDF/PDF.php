@@ -35,12 +35,12 @@ error_reporting(E_ALL);
     }
 
 //set variables used for file upload
-$targetDir = "";
-$targetFile ="";
-$targetFile = $targetDir . basename($_FILES["UpPDF"]["name"]);
+//$targetDir = "";
+//$targetFile ="";
+//$targetFile = $targetDir . basename($_FILES["UpPDF"]["name"]);
 
-$uploadOk = 1;
-$fileType = pathinfo($targetFile,PATHINFO_EXTENSION);
+//$uploadOk = 1;
+//$fileType = pathinfo($targetFile,PATHINFO_EXTENSION);
 
     class PDF
     {
@@ -51,7 +51,8 @@ $fileType = pathinfo($targetFile,PATHINFO_EXTENSION);
         protected $targetFile;
         protected $uploadOk;
         protected $fileType;
-        protected $targetNospace;
+        protected $targetNoSpace;
+        protected $fileExists;
 
 
 //***********************************************************************************************************************
@@ -59,18 +60,23 @@ $fileType = pathinfo($targetFile,PATHINFO_EXTENSION);
     public static function upload()
     {
 
-        global $category, $targetDir, $targetFile , $uploadOk ,$fileType ,$targetNospace;
+        global $category, $targetDir, $targetFile , $uploadOk ,$fileType ,$targetNoSpace;
 
         //declare catArray as CatArray function
         $catArray = CatArrayF();
 
         //count category values : ID & Values
           for ($i = 0; $i < 10; $i++) {
+
                //if the array matches the selected category stop the loop
                if($catArray[$i][0] == $_POST['Cat']) {
+
                    //get array value (ie:"SSOF") from index number
                    $category = $catArray[$i][0];
-               break;
+
+
+                   $uploadOk = 1;
+                   break;
                }
             //close for categorgy count loop
             }
@@ -78,27 +84,13 @@ $fileType = pathinfo($targetFile,PATHINFO_EXTENSION);
         $targetDir = "Category/".$category ."/";
         $targetFile ="";
         $targetFile = $targetDir . basename($_FILES["UpPDF"]["name"]);
-        $targetNospace = str_replace(' ', '_', $targetFile);
+        $targetNoSpace = str_replace(' ', '_', $targetFile);
 
-
-
-        $uploadOk = 1;
         $fileType = pathinfo($targetFile,PATHINFO_EXTENSION);
-//************************************/
-      /*
-        echo "<br>";
-        var_dump($_FILES["UpPDF"]["name"]);
-        echo "<br>";
-        var_dump($targetNospace);
-        echo "<br>";
-        echo "target dir:";
-        echo "<br>";
-        var_dump($targetDir);
-        echo "<br>";
-    */
+
 //************************************/
             //check file extension
-            if($uploadOk = 1)
+            if($uploadOk == 1)
             {
 
                 // Allow certain file formats
@@ -112,31 +104,61 @@ $fileType = pathinfo($targetFile,PATHINFO_EXTENSION);
             }
 
 //************************************
-            // Check if $uploadOk is set to 0 by an error
+         /*   // Check if $uploadOk is set to 0 by an error
             if ($uploadOk == 0) {
-                echo "Sorry, your file was not uploaded.";
 
 
-                //    return false;
-                // if everything is ok run upload func
-            } else
-            {
+                if (file_exists($targetNoSpace)) {
 
-                if (move_uploaded_file($_FILES["UpPDF"]["tmp_name"], $targetNospace)) {
-                    echo "The file ". basename( $_FILES["UpPDF"]["name"]). " has been uploaded to " .$_POST['Cat'] ."<br>";
-                  $uploadOk = 1;
+                    echo "File allready exists";
 
-                   // return true;
-                } else
-                {
-                    echo "Sorry, there was an error uploading your file.";
-                  //  return false;
-                    //close if move uploaded file
+                    $uploadOk = 0;
+                    return false;
+                //closes if file exists
                 }
-            //close if file exists
+            return false;
+            //closes if uploadOk == 1
+            }
+         */
+
+
+        if ($uploadOk == 1) {
+
+            if (file_exists($targetNoSpace)) {
+
+                echo "File allready exists";
+
+                $uploadOk = 0;
+                return false;
+                //closes if file exists
             }
 
-        //close UPValidate Func
+
+                //uploads the file and cecks if the file uploaded
+                if (move_uploaded_file($_FILES["UpPDF"]["tmp_name"], $targetNoSpace)) {
+                    //prints that the file has been uploaded to dir
+                    echo "The file " . basename($_FILES["UpPDF"]["name"]) . " has been uploaded to " . $_POST['Cat'] . "<br>";
+                    $uploadOk = 1;
+
+                    return true;
+
+                } else {
+                    echo "Sorry, there was an error uploading your file.";
+                    $uploadOk = 0;
+                    return false;
+
+                    //close if move uploaded file
+                }// if everything is ok run upload func
+                }else
+            {
+                echo "Sorry, your file was not uploaded.";
+                return false;
+
+            }
+
+
+
+        //close UPload Func
         }
 
 
@@ -144,9 +166,9 @@ $fileType = pathinfo($targetFile,PATHINFO_EXTENSION);
 //***********************************************************************************************************************
         public static function insert()
         {
-        global $uploadOk, $catSear;
-            //  $targetDir, $targetFile , $fileName ,
-           // var_dump($uploadOk);$category
+            global $catSear ,$category ,$targetDir, $targetFile , $fileName;
+//$uploadOk
+
             //new instance of CatarrayF function
             $catArray = CatArrayF();
 
@@ -155,50 +177,60 @@ $fileType = pathinfo($targetFile,PATHINFO_EXTENSION);
             echo"<br>";
             echo"<br>";
 
-            //count category values : ID & Values
-            for ($i = 0; $i < 10; $i++) {
 
-                //if the array matches the selected category stop the loop
-                if($catArray[$i][0] == $catSelect) {
-                    //get array value (ie:"SSOF") from index number
-                    //$category = $catArray[$i][0];
+                    //count category values : ID & Values
+                    for ($i = 0; $i < 10; $i++)
+                    {
 
-                    //search inner array for selected Category name
-                    $catSear = array_search($catSelect, $catArray[$i]);
-                   echo "hello motherfucker";
-                    var_dump($catArray[$i]);
-                break;
-            }
+                        //set file path to place file
+                        $targetDir = "Category/".$catSelect ."/";
+                        $fileName = basename($_FILES["UpPDF"]["name"]);
+                        $targetFile = $targetDir . $fileName;
+                        //regex : remove extension and replace spaces with underscore
+                        $targetWithoutExt = preg_replace('/\\.[^.\\s]{3,4}$/', '', $targetFile);
+                        $targetWithoutExt = str_replace(' ', '_', $targetWithoutExt);
 
 
-                echo "<br>";
-                if($catSear >= 0){
-                    echo "ello";
-                    echo "<br>";
+                      //  var_dump($catSelect);
+                      //  var_dump($catArray[$i][0]);
 
 
-                    //get array value (ie:"SSOF") from index number
-                   $category = $catArray[$i][0];
-                    //set file path to place file
-                    $targetDir = "Category/".$category ."/";
-                    $fileName = basename($_FILES["UpPDF"]["name"]);
-                    $targetFile = $targetDir . $fileName;
-                    $fileName = basename($_FILES["UpPDF"]["name"]);
-                    //set post values for DB
+                        //if the array matches the selected category stop the loop
+                  //    if($catArray[$i][0] == $catSelect)
+                   //     {
+                            //get array ID (ie:"SSOF") from index number
+                            //$category = $catArray[$i][0];
+//
+                         //   var_dump($category);
+
+                    //        echo "<br>";
+                     //       echo "ello g";
+                    //        //$uploadOk = 1;
+                            //break;
+                       // }
+                        //close for categorgy count loop
+                    //}
+
+
+                        if($catSear >= 0){
+
+
+                            //set post values for DB
                     $title = $_POST['Title'];
                     $info = $_POST['Info'];
 
+                   /*888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888
+                    *  echo "<br>target file : ";
+                     var_dump($targetFile);
                     echo "<br>";
-                    var_dump($fileName);
+                    var_dump($category);
                     echo "<br>";
 
+                   */
                     //get file extension
                     $FE = new SplFileInfo($_FILES["UpPDF"]["name"]);
                     $fileExt= $FE->getExtension();
 
-                    //regex : remove extension and replace spaces with underscores
-                    $targetWithoutExt = preg_replace('/\\.[^.\\s]{3,4}$/', '', $targetFile);
-                    $targetWithoutExt = str_replace(' ', '_', $targetWithoutExt);
 
 
 
@@ -212,25 +244,30 @@ $fileType = pathinfo($targetFile,PATHINFO_EXTENSION);
                         // set the PDO error mode to exception
                         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-                        $sql = "INSERT INTO PDF (Title, Info, Cat, Path, FileName, Filetype) VALUES ( '$title', '$info', '$category', '$targetWithoutExt','$fileName' , '$fileExt')";
+                        $sql = "INSERT INTO PDF (Title, Info, Cat, Path, FileName, Filetype) VALUES ( '$title', '$info', '$catSelect', '$targetWithoutExt','$fileName' , '$fileExt')";
+                        //PDF::upload($uploadOk) == 0 or
+                        $PDFUploadF = PDF::upload();
 
-                       // if(PDF::upload() == true) {
-                           if($uploadOk == 1) {
 
-                                PDF::upload();
+                        var_dump($PDFUploadF);
+
+                        if($PDFUploadF == true) {
+
                                // use exec() because no results are returned
                                $conn->exec($sql);
-                               echo "New record created successfully";
+                                 echo "New record created successfully";
+                               echo "<br>";
+                               //var_dump($category);
+
 
                                return true;
-
+                           //close if PDF::upload = true
                            }else{
 
-                               //close if PDF::upload = true
-                      //}
                                echo "nope";
                            }
-                    //close try
+
+                        //close try
                     }
                     catch(PDOException $e)
                     {
@@ -290,7 +327,7 @@ $fileType = pathinfo($targetFile,PATHINFO_EXTENSION);
                     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
                     $ID = $catArray[$a1][0];
-                    $value = $catArray[$a1][1];
+
 
 
                     //count all the files in the category/directory
@@ -322,7 +359,7 @@ $fileType = pathinfo($targetFile,PATHINFO_EXTENSION);
 
 
                                 //if the ID and Title colums are not empty
-                                if(!empty($row[$count]["ID"]) && !empty($row[$count]["Title"]) && file_exists($str) )
+                                if(!empty($row[$count]["ID"]) && !empty($row[$count]["Title"]) )
                                 {
 
                                         //display files HTML
@@ -332,7 +369,6 @@ $fileType = pathinfo($targetFile,PATHINFO_EXTENSION);
 
 
                                  //!!!!!!!!!!!code stops here when its not suposed to :@ !!!!!!!!!!!!
-
 
                                 //close if isset $row[$count]["ID"]
                                 }

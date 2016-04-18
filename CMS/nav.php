@@ -1,3 +1,5 @@
+
+
 <html>
 <head>
     <script src="../Assets/bootstrap/js/jquery.js"></script>
@@ -62,6 +64,13 @@
 
     </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
+
 </nav>
+<br>
+<br>
+<br><br>
+<br>
+<br>
+
 <!-- END OF NAV BAR-->
 

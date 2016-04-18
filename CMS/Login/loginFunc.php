@@ -10,15 +10,6 @@
 
 class loginFunc{
 
-    private $db;
-
-    public function __construct()
-    {
-        //session_start();
-        //$this->db = new dbconfig();
-        //$this->db = $this->db->connect();
-
-    }
 
     public function login($username, $password)
     {

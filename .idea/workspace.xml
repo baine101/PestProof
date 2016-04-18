@@ -2,7 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="32f22cca-931e-4a4c-a52e-d090d120e88d" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/CMS/PDF/Category/SSOF/chemical_weopns.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/CMS/PDF/Category/SSOF/progammer.jpg" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMS/Login/loginCheck.php" afterPath="$PROJECT_DIR$/CMS/Login/loginCheck.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMS/Login/loginFunc.php" afterPath="$PROJECT_DIR$/CMS/Login/loginFunc.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMS/PDF/PDF.php" afterPath="$PROJECT_DIR$/CMS/PDF/PDF.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMS/adminPanel.php" afterPath="$PROJECT_DIR$/CMS/adminPanel.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMS/footer.php" afterPath="$PROJECT_DIR$/CMS/footer.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMS/nav.php" afterPath="$PROJECT_DIR$/CMS/nav.php" />
     </list>
     <ignored path="html.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -24,17 +32,17 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="PDF.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="PDF.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CMS/PDF/PDF.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.21283785">
-              <caret line="214" column="109" selection-start-line="214" selection-start-column="109" selection-end-line="214" selection-end-column="109" />
+            <state vertical-scroll-proportion="84.375">
+              <caret line="194" column="24" selection-start-line="194" selection-start-column="24" selection-end-line="194" selection-end-column="24" />
               <folding>
                 <element signature="e#6#84#0#PHP" expanded="true" />
-                <marker date="1460892351532" expanded="true" signature="6888:6957" placeholder="INSERT INTO PDF... " />
-                <marker date="1460892351532" expanded="true" signature="6888:7035" placeholder="INSERT INTO MyGuests... " />
-                <marker date="1460892351532" expanded="true" signature="9701:9743" placeholder="SELECT COUNT... PDF" />
-                <marker date="1460892351532" expanded="true" signature="10032:10067" placeholder="SELECT * FRO... PDF" />
+                <marker date="1460968430600" expanded="true" signature="7534:7603" placeholder="INSERT INTO PDF... " />
+                <marker date="1460968430600" expanded="true" signature="7534:7682" placeholder="INSERT INTO MyGuests... " />
+                <marker date="1460968430600" expanded="true" signature="10436:10478" placeholder="SELECT COUNT... PDF" />
+                <marker date="1460968430600" expanded="true" signature="10767:10802" placeholder="SELECT * FRO... PDF" />
               </folding>
             </state>
           </provider>
@@ -43,8 +51,48 @@
       <file leaf-file-name="login.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CMS/login.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="17" column="2" selection-start-line="17" selection-start-column="2" selection-end-line="17" selection-end-column="2" />
+            <state vertical-scroll-proportion="-10.625">
+              <caret line="25" column="29" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="29" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="adminPanel.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CMS/adminPanel.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-14.041667">
+              <caret line="77" column="28" selection-start-line="75" selection-start-column="3" selection-end-line="83" selection-end-column="39" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="loginCheck.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CMS/Login/loginCheck.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-12.5">
+              <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="nav.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CMS/nav.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-23.416666">
+              <caret line="73" column="0" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="upload.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/CMS/upload.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.7719595">
+              <caret line="96" column="8" selection-start-line="96" selection-start-column="8" selection-end-line="96" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -53,7 +101,7 @@
       <file leaf-file-name="dbConfig.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CMS/dbConfig.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.25">
+            <state vertical-scroll-proportion="0.0">
               <caret line="30" column="45" selection-start-line="30" selection-start-column="45" selection-end-line="30" selection-end-column="45" />
               <folding>
                 <element signature="e#6#83#0#PHP" expanded="true" />
@@ -80,10 +128,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/pestproof/AdminPanel/loginCheck.php" />
-        <option value="$PROJECT_DIR$/pestproof/AdminPanel/dbconfig.php" />
-        <option value="$PROJECT_DIR$/pestproof/CMS/nav.php" />
-        <option value="$PROJECT_DIR$/pestproof/CMS/footer.php" />
         <option value="$PROJECT_DIR$/AdminPanel/Login/nav.php" />
         <option value="$PROJECT_DIR$/AdminPanel/nav.php" />
         <option value="$PROJECT_DIR$/AdminPanel/footer.php" />
@@ -121,16 +165,20 @@
         <option value="/etc/apache2/apache2.conf" />
         <option value="$PROJECT_DIR$/CMS/Login/logoutFunc.php" />
         <option value="$PROJECT_DIR$/index.php" />
-        <option value="$PROJECT_DIR$/CMS/nav.php" />
         <option value="$PROJECT_DIR$/Assets/bootstrap/js/jquery.js" />
         <option value="$PROJECT_DIR$/Assets/bootstrap/css/pestproof.css" />
-        <option value="$PROJECT_DIR$/CMS/Login/loginFunc.php" />
-        <option value="$PROJECT_DIR$/CMS/adminPanel.php" />
         <option value="$PROJECT_DIR$/CMS/landing.php" />
         <option value="$PROJECT_DIR$/CMS/login.php" />
         <option value="$PROJECT_DIR$/CMS/PDF/upload.php" />
         <option value="$PROJECT_DIR$/CMS/dbConfig.php" />
+        <option value="$PROJECT_DIR$/CMS/Login/PDF.php" />
         <option value="$PROJECT_DIR$/CMS/PDF/PDF.php" />
+        <option value="$PROJECT_DIR$/CMS/Login/loginFunc.php" />
+        <option value="$PROJECT_DIR$/CMS/Login/loginCheck.php" />
+        <option value="$PROJECT_DIR$/CMS/adminPanel.php" />
+        <option value="$PROJECT_DIR$/CMS/nav.php" />
+        <option value="$PROJECT_DIR$/CMS/footer.php" />
+        <option value="$PROJECT_DIR$/CMS/upload.php" />
       </list>
     </option>
   </component>
@@ -175,6 +223,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -239,54 +289,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="PDF" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Category" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="html" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="html" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CMS" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PDF" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Category" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SSOF" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="html" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="html" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CMS" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="Login" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -304,32 +306,6 @@
               <option name="myItemId" value="Assets" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PDFViewer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="html" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="html" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PDFViewer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="build" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -346,165 +322,11 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="bootstrap" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="html" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="html" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bootstrap" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fonts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="html" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="html" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bootstrap" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="font-awesome" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scss" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="html" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="html" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bootstrap" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="font-awesome" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="less" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="html" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="html" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bootstrap" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="font-awesome" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fonts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="html" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="html" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bootstrap" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="font-awesome" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="html" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="html" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bootstrap" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -512,18 +334,19 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///var/www/html/Assets/bootstrap/js/jquery.js" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/CMS/PDF/Category/COSHH" />
+      <recent name="/etc/apache2" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/CMS/PDF" />
       <recent name="$PROJECT_DIR$/pestproof/Views" />
       <recent name="$PROJECT_DIR$/pestproof" />
       <recent name="$PROJECT_DIR$/pestproof/AdminPanel" />
       <recent name="$PROJECT_DIR$" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/CMS/PDF/Category/COSHH" />
-      <recent name="/etc/apache2" />
     </key>
   </component>
   <component name="RunManager">
@@ -573,16 +396,21 @@
       <option name="project" value="LOCAL" />
       <updated>1460901740892</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Sunday 17/04/16 14:59 - List broken  ? - uplod/insert working">
+      <created>1460901747530</created>
+      <option name="number" value="00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1460901747530</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1366" height="741" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20790629" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14787701" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32919255" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32919255" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -590,6 +418,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32919255" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -636,28 +465,127 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/CMS/Login/loginFunc.php</url>
-          <line>16</line>
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
-      </breakpoints>
-      <option name="time" value="22" />
+      <option name="time" value="30" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/CMS/login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="17" column="2" selection-start-line="17" selection-start-column="2" selection-end-line="17" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMS/dbConfig.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="30" column="45" selection-start-line="30" selection-start-column="45" selection-end-line="30" selection-end-column="45" />
+          <folding>
+            <element signature="e#6#83#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMS/landing.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="37" column="22" selection-start-line="37" selection-start-column="22" selection-end-line="37" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/CMS/PDF/PDF.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#6#84#0#PHP" expanded="true" />
-            <marker date="1460892351532" expanded="true" signature="6888:6957" placeholder="INSERT INTO PDF... " />
-            <marker date="1460892351532" expanded="true" signature="6888:7035" placeholder="INSERT INTO MyGuests... " />
-            <marker date="1460892351532" expanded="true" signature="9701:9743" placeholder="SELECT COUNT... PDF" />
-            <marker date="1460892351532" expanded="true" signature="10032:10067" placeholder="SELECT * FRO... PDF" />
+            <marker date="1460968430600" expanded="true" signature="7534:7603" placeholder="INSERT INTO PDF... " />
+            <marker date="1460968430600" expanded="true" signature="7534:7682" placeholder="INSERT INTO MyGuests... " />
+            <marker date="1460968430600" expanded="true" signature="10436:10478" placeholder="SELECT COUNT... PDF" />
+            <marker date="1460968430600" expanded="true" signature="10767:10802" placeholder="SELECT * FRO... PDF" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMS/login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="17" column="2" selection-start-line="17" selection-start-column="2" selection-end-line="17" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMS/dbConfig.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="30" column="45" selection-start-line="30" selection-start-column="45" selection-end-line="30" selection-end-column="45" />
+          <folding>
+            <element signature="e#6#83#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMS/landing.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="37" column="22" selection-start-line="37" selection-start-column="22" selection-end-line="37" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMS/PDF/PDF.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#6#84#0#PHP" expanded="true" />
+            <marker date="1460968430600" expanded="true" signature="7534:7603" placeholder="INSERT INTO PDF... " />
+            <marker date="1460968430600" expanded="true" signature="7534:7682" placeholder="INSERT INTO MyGuests... " />
+            <marker date="1460968430600" expanded="true" signature="10436:10478" placeholder="SELECT COUNT... PDF" />
+            <marker date="1460968430600" expanded="true" signature="10767:10802" placeholder="SELECT * FRO... PDF" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMS/login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="17" column="2" selection-start-line="17" selection-start-column="2" selection-end-line="17" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMS/dbConfig.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="30" column="45" selection-start-line="30" selection-start-column="45" selection-end-line="30" selection-end-column="45" />
+          <folding>
+            <element signature="e#6#83#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMS/landing.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="37" column="22" selection-start-line="37" selection-start-column="22" selection-end-line="37" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMS/PDF/PDF.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#6#84#0#PHP" expanded="true" />
+            <marker date="1460968430600" expanded="true" signature="7534:7603" placeholder="INSERT INTO PDF... " />
+            <marker date="1460968430600" expanded="true" signature="7534:7682" placeholder="INSERT INTO MyGuests... " />
+            <marker date="1460968430600" expanded="true" signature="10436:10478" placeholder="SELECT COUNT... PDF" />
+            <marker date="1460968430600" expanded="true" signature="10767:10802" placeholder="SELECT * FRO... PDF" />
           </folding>
         </state>
       </provider>
@@ -694,10 +622,10 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#6#84#0#PHP" expanded="true" />
-            <marker date="1460892351532" expanded="true" signature="6888:6957" placeholder="INSERT INTO PDF... " />
-            <marker date="1460892351532" expanded="true" signature="6888:7035" placeholder="INSERT INTO MyGuests... " />
-            <marker date="1460892351532" expanded="true" signature="9701:9743" placeholder="SELECT COUNT... PDF" />
-            <marker date="1460892351532" expanded="true" signature="10032:10067" placeholder="SELECT * FRO... PDF" />
+            <marker date="1460968430600" expanded="true" signature="7534:7603" placeholder="INSERT INTO PDF... " />
+            <marker date="1460968430600" expanded="true" signature="7534:7682" placeholder="INSERT INTO MyGuests... " />
+            <marker date="1460968430600" expanded="true" signature="10436:10478" placeholder="SELECT COUNT... PDF" />
+            <marker date="1460968430600" expanded="true" signature="10767:10802" placeholder="SELECT * FRO... PDF" />
           </folding>
         </state>
       </provider>
@@ -733,10 +661,10 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#6#84#0#PHP" expanded="true" />
-            <marker date="1460892351532" expanded="true" signature="6888:6957" placeholder="INSERT INTO PDF... " />
-            <marker date="1460892351532" expanded="true" signature="6888:7035" placeholder="INSERT INTO MyGuests... " />
-            <marker date="1460892351532" expanded="true" signature="9701:9743" placeholder="SELECT COUNT... PDF" />
-            <marker date="1460892351532" expanded="true" signature="10032:10067" placeholder="SELECT * FRO... PDF" />
+            <marker date="1460968430600" expanded="true" signature="7534:7603" placeholder="INSERT INTO PDF... " />
+            <marker date="1460968430600" expanded="true" signature="7534:7682" placeholder="INSERT INTO MyGuests... " />
+            <marker date="1460968430600" expanded="true" signature="10436:10478" placeholder="SELECT COUNT... PDF" />
+            <marker date="1460968430600" expanded="true" signature="10767:10802" placeholder="SELECT * FRO... PDF" />
           </folding>
         </state>
       </provider>
@@ -769,10 +697,10 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#6#84#0#PHP" expanded="true" />
-            <marker date="1460892351532" expanded="true" signature="6888:6957" placeholder="INSERT INTO PDF... " />
-            <marker date="1460892351532" expanded="true" signature="6888:7035" placeholder="INSERT INTO MyGuests... " />
-            <marker date="1460892351532" expanded="true" signature="9701:9743" placeholder="SELECT COUNT... PDF" />
-            <marker date="1460892351532" expanded="true" signature="10032:10067" placeholder="SELECT * FRO... PDF" />
+            <marker date="1460968430600" expanded="true" signature="7534:7603" placeholder="INSERT INTO PDF... " />
+            <marker date="1460968430600" expanded="true" signature="7534:7682" placeholder="INSERT INTO MyGuests... " />
+            <marker date="1460968430600" expanded="true" signature="10436:10478" placeholder="SELECT COUNT... PDF" />
+            <marker date="1460968430600" expanded="true" signature="10767:10802" placeholder="SELECT * FRO... PDF" />
           </folding>
         </state>
       </provider>
@@ -805,10 +733,10 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#6#84#0#PHP" expanded="true" />
-            <marker date="1460892351532" expanded="true" signature="6888:6957" placeholder="INSERT INTO PDF... " />
-            <marker date="1460892351532" expanded="true" signature="6888:7035" placeholder="INSERT INTO MyGuests... " />
-            <marker date="1460892351532" expanded="true" signature="9701:9743" placeholder="SELECT COUNT... PDF" />
-            <marker date="1460892351532" expanded="true" signature="10032:10067" placeholder="SELECT * FRO... PDF" />
+            <marker date="1460968430600" expanded="true" signature="7534:7603" placeholder="INSERT INTO PDF... " />
+            <marker date="1460968430600" expanded="true" signature="7534:7682" placeholder="INSERT INTO MyGuests... " />
+            <marker date="1460968430600" expanded="true" signature="10436:10478" placeholder="SELECT COUNT... PDF" />
+            <marker date="1460968430600" expanded="true" signature="10767:10802" placeholder="SELECT * FRO... PDF" />
           </folding>
         </state>
       </provider>
@@ -841,10 +769,10 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#6#84#0#PHP" expanded="true" />
-            <marker date="1460892351532" expanded="true" signature="6888:6957" placeholder="INSERT INTO PDF... " />
-            <marker date="1460892351532" expanded="true" signature="6888:7035" placeholder="INSERT INTO MyGuests... " />
-            <marker date="1460892351532" expanded="true" signature="9701:9743" placeholder="SELECT COUNT... PDF" />
-            <marker date="1460892351532" expanded="true" signature="10032:10067" placeholder="SELECT * FRO... PDF" />
+            <marker date="1460968430600" expanded="true" signature="7534:7603" placeholder="INSERT INTO PDF... " />
+            <marker date="1460968430600" expanded="true" signature="7534:7682" placeholder="INSERT INTO MyGuests... " />
+            <marker date="1460968430600" expanded="true" signature="10436:10478" placeholder="SELECT COUNT... PDF" />
+            <marker date="1460968430600" expanded="true" signature="10767:10802" placeholder="SELECT * FRO... PDF" />
           </folding>
         </state>
       </provider>
@@ -864,13 +792,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/controllers/HScontroller.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CMS/Login/loginCheck.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -905,39 +826,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CMS/nav.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3564189">
-          <caret line="27" column="39" selection-start-line="27" selection-start-column="39" selection-end-line="27" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/bootstrap/js/jquery.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.5384616">
-          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/bootstrap/css/pestproof.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="250" column="1" selection-start-line="250" selection-start-column="1" selection-end-line="250" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CMS/Login/loginFunc.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="16" column="10" selection-start-line="16" selection-start-column="10" selection-end-line="16" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CMS/footer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-21.291666">
-          <caret line="58" column="0" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -949,24 +841,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CMS/login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="17" column="2" selection-start-line="17" selection-start-column="2" selection-end-line="17" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CMS/adminPanel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5033784">
-          <caret line="64" column="56" selection-start-line="64" selection-start-column="56" selection-end-line="64" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/CMS/dbConfig.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.25">
+        <state vertical-scroll-proportion="0.0">
           <caret line="30" column="45" selection-start-line="30" selection-start-column="45" selection-end-line="30" selection-end-column="45" />
           <folding>
             <element signature="e#6#83#0#PHP" expanded="true" />
@@ -976,15 +853,79 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/CMS/PDF/PDF.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.21283785">
-          <caret line="214" column="109" selection-start-line="214" selection-start-column="109" selection-end-line="214" selection-end-column="109" />
+        <state vertical-scroll-proportion="84.375">
+          <caret line="194" column="24" selection-start-line="194" selection-start-column="24" selection-end-line="194" selection-end-column="24" />
           <folding>
             <element signature="e#6#84#0#PHP" expanded="true" />
-            <marker date="1460892351532" expanded="true" signature="6888:6957" placeholder="INSERT INTO PDF... " />
-            <marker date="1460892351532" expanded="true" signature="6888:7035" placeholder="INSERT INTO MyGuests... " />
-            <marker date="1460892351532" expanded="true" signature="9701:9743" placeholder="SELECT COUNT... PDF" />
-            <marker date="1460892351532" expanded="true" signature="10032:10067" placeholder="SELECT * FRO... PDF" />
+            <marker date="1460968430600" expanded="true" signature="7534:7603" placeholder="INSERT INTO PDF... " />
+            <marker date="1460968430600" expanded="true" signature="7534:7682" placeholder="INSERT INTO MyGuests... " />
+            <marker date="1460968430600" expanded="true" signature="10436:10478" placeholder="SELECT COUNT... PDF" />
+            <marker date="1460968430600" expanded="true" signature="10767:10802" placeholder="SELECT * FRO... PDF" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/bootstrap/js/jquery.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7965812">
+          <caret line="3" column="30630" selection-start-line="3" selection-start-column="30629" selection-end-line="3" selection-end-column="30630" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMS/Login/loginFunc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.15202703">
+          <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMS/login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.625">
+          <caret line="25" column="29" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMS/nav.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-23.416666">
+          <caret line="73" column="0" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMS/adminPanel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-14.041667">
+          <caret line="77" column="28" selection-start-line="75" selection-start-column="3" selection-end-line="83" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMS/Login/loginCheck.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.5">
+          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMS/footer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.9493243">
+          <caret line="58" column="4" selection-start-line="58" selection-start-column="4" selection-end-line="58" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMS/upload.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7719595">
+          <caret line="96" column="8" selection-start-line="96" selection-start-column="8" selection-end-line="96" selection-end-column="8" />
+          <folding />
         </state>
       </provider>
     </entry>
