@@ -1,19 +1,4 @@
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!--footer-->
 <footer class="panel-footer">
     <div class="container">

@@ -16,11 +16,11 @@
 
             <!--footer logos -->
             <div class="col-sm-4 footer-text">
-                <img class="footer-img" src="../images/bcpa.jpg">
-                <img class="footer-img" src="../images/chas.jpg">
-                <img class="footer-img" src="../images/safecontractor.jpg">
-                <img class="footer-img" src="../images/constructionline.jpg">
-                <img class="footer-img" src="../images/isoqar.jpg">
+                <img class="footer-img" src="images/bcpa.jpg">
+                <img class="footer-img" src="images/chas.jpg">
+                <img class="footer-img" src="images/safecontractor.jpg">
+                <img class="footer-img" src="images/constructionline.jpg">
+                <img class="footer-img" src="images/isoqar.jpg">
 
             </div>
             <!--footer address -->
@@ -44,7 +44,7 @@
             </div>
             <div class="col-sm-2 footer-text">
                 <p align="right"><b>© Copyright: Pestproof .<br> Website made by <a class="a-section" href="http://alexwaine.infamousmafia.co.uk">Alex Waine</a></b></p>
-                <p><a href="../CMS/login.php">Site Admin</a></p>
+                <p><a href="CMS/login.php">Site Admin</a></p>
             </div>
         </div>
 

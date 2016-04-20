@@ -66,11 +66,6 @@
     </div><!-- /.container-fluid -->
 
 </nav>
-<br>
-<br>
-<br><br>
-<br>
-<br>
 
 <!-- END OF NAV BAR-->
 

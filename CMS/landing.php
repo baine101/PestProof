@@ -9,6 +9,8 @@ require "nav.php";
 require "PDF/PDF.php";
 ?>
 
+
+
 <!-- headding image-->
 
 <div  class="row section-head" id="Head">
@@ -33,23 +35,22 @@ require "PDF/PDF.php";
     </div>
 </div>
 
-
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 <!-- heading -->
+
 <?php PDF::PDFList()?>
 
 
 
-
 <br>
 <br>
 <br>
-<br>
-<br>
-<br>
-<br>
-
-
-
 
 
 <?php

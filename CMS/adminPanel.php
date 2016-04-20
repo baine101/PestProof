@@ -9,81 +9,80 @@
    // ini_set('display_errors', 'On');
    // error_reporting(E_ALL);
 
-    session_start();
+  //  session_start();
 
 
 require "nav.php";
-require "Login/loginCheck.php";
 require "Login/loginFunc.php";
 require "Login/logoutFunc.php";
 require "PDF/PDF.php";
+require "Login/loginCheck.php";
 
-    //new instance of loginCheck : check if logged in
-    $loginCheck = new loginCheck();
-    $loginCheck->Check();
-
-    //new loginFunc instance
-    $logFunc = new loginFunc();
-
-    //if the login is pressed
-    if(isset($_POST['logout'])) {
-
-       logout();
-
-        exit;
+    if(Check() == false)
+    {
+        header("location:  login.php");
+        exit();
     }
-?>
+    elseif(Check() == true) {
 
-<br>
-<br>
-<br>
-<br>
-<br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
+echo "<br><br><br><br>";
 
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
+        PDF::PDFList();
 
 
 
+        //if the login is pressed
+        if (isset($_POST['logout'])) {
+
+            logout();
+
+            exit;
+        }
+
+        ?>
+
+        <div class="col-lg-6 right">
+            <div class="input-group">
+                <form action="upload.php">
+                    <input class="form-control" type="submit" value="Upload" name="upload" id="uplaod">
+                </form>
 
 
-    <div class="col-lg-12">
-    <a href="upload.php">Upload PDF</a>
+            </div>
+        </div>
 
+        <!-- form : logout button -->
 
-
-
-
-
-
-    </div>
-
-
-    <!-- form : logout button -->
-
-        <form action="<?php $_SERVER['PHP_SELF']?>" method="post">
+        <form action="<?php $_SERVER['PHP_SELF'] ?>" method="post">
             <div class="input-group">
                 <input class="form-control" type="submit" name="logout" value="Logout">
             </div>
         </form>
 
-    <!-- close form : logout button -->
+        <!-- close form : logout button -->
 
+        <script type="text/javascript">
 
-<?php
+            function PDFdeleteJS() {
+                if (confirm('Are you sure you want to delete this file?')) {
+                    //Make ajax call
+                    $.ajax({
+                        url: "PDF/PDF.php",
+                        type: "POST",
+                        data: {id : 5},
+                        dataType: "html",
+                        success: Delete(){
+                            alert("It was succesfully deleted!");
+                        }
+                    })
+
+                }
+            }
+        </script>
+        <?php
+
+    //close if logged in check
+    }
 include "footer.php";
 ?>
+

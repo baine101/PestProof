@@ -15,7 +15,7 @@ namespace dbconnect;
 // $ADMIN_PASSWORD;
 // $DB;
 define("ADMIN_USER", "admin");
-define("ADMIN_PASSWORD", "mypass");
+define("ADMIN_PASSWORD", "Mypass");
 class dbconfig
 {
 

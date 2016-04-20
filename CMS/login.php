@@ -14,51 +14,80 @@ require "nav.php";
 require "Login/loginFunc.php";
 require  "Login/loginCheck.php";
 
-//DB connect
-//dbconnect\dbconfig::connect();
-
-//new instance of loginCheck : check if logged in
-$loginCheck = new loginCheck();
-$loginCheck->Check();
-
+if(Check() == true)
+{
+    header("location:  adminPanel.php");
+}
+elseif(Check() == false) {
+     // header("location: login.php");
 
 
 // if login button is pressed
-if(isset($_POST['login'])){
-    $username = $_POST['username'];
-    $password = $_POST['password'];
+    if (isset($_POST['login'])) {
 
-    // create new instance of loginCheck and login function
-    $loginFunc = new loginFunc;
-    $loginFunc->login($username, $password);
+        //if their is values in the username and password
+        if (!empty($_POST['username']) && !empty($_POST['password'])) {
 
 
-//close if isset
-}else{
+            $username = $_POST['username'];
+            $password = $_POST['password'];
 
-    echo "please enter your username and password";
+            // create new instance of loginCheck and login function
+            $loginFunc = new loginFunc;
+            $loginFunc->login($username, $password);
+
+        } else {
+
+            echo "<br><br><br>";
+            echo "please enter your username and password";
+
+            //close if login btn is pressed
+        }
+//close if isset POST login  button
+    }
+
+
+
+
+    ?>
+
+<br>
+    <br>
+    <br>
+
+    <!-- Start Login Panel -->
+    <div class='form-wrapper row'>
+        <h1 class='header-fancy'> Pestproof Admin </h1>
+        <!-- Left side column -->
+        <div class="col-md-4"></div>
+        <!-- Middle Column -->
+        <div class="col-md-4">
+            <!-- Start of login form -->
+            <form action="login.php" method="post" class='login-form'>
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" class='form-control' name="username" id="username" placeholder="Admin Username">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" class='form-control' name="password" id="password" placeholder="Admin Password">
+                </div>
+                <input type="submit" class="btn btn-default" value="Login" name="login" id="login"/>
+            </form>
+            <!-- End of login form -->
+
+        </div>
+        <!-- Right side column -->
+        <div class="col-md-4"></div>
+    </div>
+    <!-- End Login Panel -->
+
+
+
+    <?php
+
+//close ifelse logged in check
 }
-?>
 
-
-
-<br>
-<br>
-<br>
-<br>
-<br>
-
-
-
-<form action="login.php" method="post">
-    <label for="username">Username</label>
-    <input type="text" id="username" name="username" placeholder="Admin Username"><br>
-    <label for="password">Password</label>
-    <input type="password" id="password" name="password" placeholder="Admin Password"><br><br>
-    <input type="submit" value="Login" name="login" id="login">
-</form>
-
-
-<?php
 require "footer.php"
 ?>

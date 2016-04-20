@@ -7,7 +7,6 @@
  */
 
 
-
 class loginFunc{
 
 
@@ -15,13 +14,14 @@ class loginFunc{
     {
         if(!empty($username) && !empty($password)){
 
-
-
-                if($username == ADMIN_USER && $password == ADMIN_PASSWORD){
-
+                //if the user and password matches the hardcoded values
+                if($username === ADMIN_USER && $password === ADMIN_PASSWORD){
+                    session_start();
+                    //hash the password to store in session
                     $passCrypt = password_hash($password , PASSWORD_BCRYPT);
 
 
+                    //set session variables
                     $_SESSION['username'] = $username;
                     $_SESSION['password'] = $passCrypt;
 
@@ -37,7 +37,7 @@ class loginFunc{
             //validation for form
         }elseif(!empty($username) or !empty($password))
         {
-
+            echo "<br><br><br>";
             echo "Please fill out both fields";
 
             //close else

@@ -9,7 +9,7 @@
 
 ini_set('display_errors', 'On');
 error_reporting(E_ALL);
-
+session_start();
 
 //***********************************************************************************************************************
     function CatArrayF()
@@ -34,13 +34,14 @@ error_reporting(E_ALL);
         //close CatArrayF function
     }
 
-//set variables used for file upload
-//$targetDir = "";
-//$targetFile ="";
-//$targetFile = $targetDir . basename($_FILES["UpPDF"]["name"]);
 
-//$uploadOk = 1;
-//$fileType = pathinfo($targetFile,PATHINFO_EXTENSION);
+
+global $currentID;
+global $currentTitle;
+global $currentInfo;
+global $currentCat;
+global $currentPath;
+global $currentFileType;
 
     class PDF
     {
@@ -94,7 +95,7 @@ error_reporting(E_ALL);
             {
 
                 // Allow certain file formats
-                if($fileType != "jpg" && $fileType != "jpeg" && $fileType != "PDF") {
+                if($fileType != "jpg" && $fileType != "jpeg" && $fileType != "PDF" && $fileType != "pdf") {
                     echo "Sorry, only JPG, JPEG and PDF files are allowed to";
 
                     $uploadOk = 0;
@@ -104,29 +105,13 @@ error_reporting(E_ALL);
             }
 
 //************************************
-         /*   // Check if $uploadOk is set to 0 by an error
-            if ($uploadOk == 0) {
-
-
-                if (file_exists($targetNoSpace)) {
-
-                    echo "File allready exists";
-
-                    $uploadOk = 0;
-                    return false;
-                //closes if file exists
-                }
-            return false;
-            //closes if uploadOk == 1
-            }
-         */
 
 
         if ($uploadOk == 1) {
 
             if (file_exists($targetNoSpace)) {
 
-                echo "File allready exists";
+                echo "File allready exists<br>";
 
                 $uploadOk = 0;
                 return false;
@@ -157,7 +142,6 @@ error_reporting(E_ALL);
             }
 
 
-
         //close UPload Func
         }
 
@@ -167,12 +151,11 @@ error_reporting(E_ALL);
         public static function insert()
         {
             global $catSear ,$category ,$targetDir, $targetFile , $fileName;
-//$uploadOk
+
 
             //new instance of CatarrayF function
             $catArray = CatArrayF();
 
-          //  $UploadFileName = $_FILES['UpPDF']['name'];
             $catSelect = $_POST['Cat'];
             echo"<br>";
             echo"<br>";
@@ -191,27 +174,6 @@ error_reporting(E_ALL);
                         $targetWithoutExt = str_replace(' ', '_', $targetWithoutExt);
 
 
-                      //  var_dump($catSelect);
-                      //  var_dump($catArray[$i][0]);
-
-
-                        //if the array matches the selected category stop the loop
-                  //    if($catArray[$i][0] == $catSelect)
-                   //     {
-                            //get array ID (ie:"SSOF") from index number
-                            //$category = $catArray[$i][0];
-//
-                         //   var_dump($category);
-
-                    //        echo "<br>";
-                     //       echo "ello g";
-                    //        //$uploadOk = 1;
-                            //break;
-                       // }
-                        //close for categorgy count loop
-                    //}
-
-
                         if($catSear >= 0){
 
 
@@ -219,14 +181,8 @@ error_reporting(E_ALL);
                     $title = $_POST['Title'];
                     $info = $_POST['Info'];
 
-                   /*888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888
-                    *  echo "<br>target file : ";
-                     var_dump($targetFile);
-                    echo "<br>";
-                    var_dump($category);
-                    echo "<br>";
+                   /*888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888*/
 
-                   */
                     //get file extension
                     $FE = new SplFileInfo($_FILES["UpPDF"]["name"]);
                     $fileExt= $FE->getExtension();
@@ -249,8 +205,7 @@ error_reporting(E_ALL);
                         $PDFUploadF = PDF::upload();
 
 
-                        var_dump($PDFUploadF);
-
+                        // if the file uploaded sucsessfully
                         if($PDFUploadF == true) {
 
                                // use exec() because no results are returned
@@ -264,7 +219,7 @@ error_reporting(E_ALL);
                            //close if PDF::upload = true
                            }else{
 
-                               echo "nope";
+                               echo "The file has not uploaded properly please rety ";
                            }
 
                         //close try
@@ -288,6 +243,23 @@ error_reporting(E_ALL);
 //***********************************************************************************************************************
         public static function Edit()
         {
+            //DELME
+            var_dump($_POST['ID']);
+            echo"<br>";
+            var_dump($_POST['Title']);
+            echo"<br>";
+            var_dump($_POST['Info']);
+            echo"<br>";
+            var_dump($_POST['Cat']);
+            echo"<br>";
+            var_dump($_POST['Path']);
+            echo"<br>";
+            var_dump($_POST['FileType']);
+            // /DELME
+
+
+
+
             //delete old pdf
             //upload new pdf
             //change title,info
@@ -298,23 +270,98 @@ error_reporting(E_ALL);
 //***********************************************************************************************************************
         public static function Delete()
         {
-            //get PDF path location
-            //delete table row for  $ID
-            //
+
+            global $ID , $Title , $Info , $Cat , $Path , $FileType;
+
+            //DELME
+            var_dump($_POST['ID']);
+            echo"<br>";
+            var_dump($_POST['Title']);
+            echo"<br>";
+            var_dump($_POST['Info']);
+            echo"<br>";
+            var_dump($_POST['Cat']);
+            echo"<br>";
+            var_dump($_POST['Path']);
+            echo"<br>";
+            var_dump($_POST['FileType']);
+            // /DELME
+
+            $ID = $_POST['ID'];
+
+            //connect to DB
+            $conn = new PDO("mysql:host=localhost;dbname=Pestproof", 'baine101', 'blink182');
+            // set the PDO error mode to exception
+            $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+            $sql = "SELECT * FROM PDF WHERE ID = '$ID'";
+
+            foreach($conn->query($sql) as $row){
+
+                $ID = $row['ID'];
+                $PID = $_POST['ID'];
+                $Title = $row['Title'];
+                $Info = $row['Info'];
+                $Cat = $row['Cat'];
+                $Path = $row['Path'];
+                $FileType =$row['FileType'];
+
+                $fullPath = "PDF/" . $Path . "." . $FileType;
+                echo "<br>$fullPath";
+                echo "<br>$PID";
+                echo "<br>$ID";
+
+                //delete if file exists
+                if(file_exists($fullPath) == true)  {
+                    // set query
+                    $sqlDel = "DELETE FROM PDF WHERE ID ='$PID'";
+                   //delete row from DB
+                    $conn->exec($sqlDel);
+                    if(unlink($fullPath)){
+                        echo "File deleted";
+                    }
+
+
+
+
+                //close if file exists
+                }
+            //close foreach sql
+            }
+
+
 
             //close Delete func
         }
     //***********************************************************************************************************************
+
+  //check if logged in function
+    static function Check()
+    {
+
+        if(isset($_SESSION['username']) && isset($_SESSION['password']) )
+        {
+            return true;
+        }else{
+            return false;
+        }
+
+        //close func Check
+    }
+
+    //***********************************************************************************************************************
+
+
         public static function PDFList()
         {
-            //include "../dbConfig.php";
+            //require_once "../Login/loginCheck.php";
 
             $catArray = CatArrayF();
             //a1 = cycle through outer array
             for ($a1 = 0; $a1 < 10; $a1++)
             {
-                //echo each category HTML
-                echo"<h2>".$catArray[$a1][1]."</h2>";
+                //echo each category title HTML
+                echo" <div class='panel-custom'></div> <div class='panel-heading'><h3 class='panel-title'>".$catArray[$a1][1]."</h3></div></div>";
 
                  //count the vars in inner array
                 for ($row = 1; $row < 2; $row++)
@@ -361,14 +408,101 @@ error_reporting(E_ALL);
                                 //if the ID and Title colums are not empty
                                 if(!empty($row[$count]["ID"]) && !empty($row[$count]["Title"]) )
                                 {
+                                    $catTitle = implode($row[$count]);
+//display files HTML@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
-                                        //display files HTML
-                                        echo "id : " . $row[$count]["ID"] . "<br> Name : " . $row[$count]["Title"] . "<br> Info : " . $row[$count]["Info"] . "<br> Category : " . $row[$count]['Cat'] . "<br> path : " . $row[$count]['Path'] . "<br> ext: " . $row[$count]['FileType'] . "<br> end";
+
+                                    //set variables as string
+                                    $ID = $row[$count]['ID'];
+                                    $Title = $row[$count]['Title'];
+                                    $Info = $row[$count]['Info'];
+                                    $Cat = $row[$count]['Cat'];
+                                    $Path = $row[$count]['Path'];
+                                    $FileType = $row[$count]['FileType'];
+
+
+                                    //  data-target='#". $catTitle."'    data-toggle='collapse'
+               echo "
+					  <div class='panel-body'>
+			            <form method='post'><input class='btn btn-custom form-control' type='submit' aria-expanded='false' name='file' id='file' value='" . $row[$count]["Title"] . "'>
+					    <input type='hidden' name='ID' value=' ".$ID ." '>
+                        <input type='hidden' name='Title' value=' ". $Title." '>
+                        <input type='hidden' name='Info' value=' ".$Info ." '>
+                        <input type='hidden' name='Cat' value=' ". $Cat." '>
+                        <input type='hidden' name='Path' value=' ".$Path ." '>
+                        <input type='hidden' name='FileType' value=' ".$FileType ." '>
+					    </form>
+					   <div class='well text-center'><h2>Information</h2>
+					" . $row[$count]["Info"] . " <br>";
+
+                                    //if admin logged in display delete buttons
+                                    if(PDF::Check() == true){
+                                        //set curent page and check page
+                                        $adminpanel = "/CMS/adminPanel.php";
+                                        $currentPage = $_SERVER['REQUEST_URI'];;
+
+                                        //if on admin panel page
+                                        if($currentPage == $adminpanel) {
+
+                                            echo "<br>";
+
+                                            //set variables as string
+                                            $ID = $row[$count]['ID'];
+                                            $Title = $row[$count]['Title'];
+                                            $Info = $row[$count]['Info'];
+                                            $Cat = $row[$count]['Cat'];
+                                            $Path = $row[$count]['Path'];
+                                            $FileType = $row[$count]['FileType'];
+
+
+                                            //EDIT BUTTON - set hidden inputs for each collum name
+                                          //  echo "<div class='col-lg-6'>";
+                                            echo "<form method='post'>";
+                                            echo "<input type='hidden' name='ID' value=' ".$ID ." '> ";
+                                            echo "<input type='hidden' name='Title' value=' ". $Title." '> ";
+                                            echo "<input type='hidden' name='Info' value=' ".$Info ." '> ";
+                                            echo "<input type='hidden' name='Cat' value=' ". $Cat." '> ";
+                                            echo "<input type='hidden' name='Path' value=' ".$Path ." '> ";
+                                            echo "<input type='hidden' name='FileType' value=' ".$FileType ." '> ";
+
+                                            //EDIT BUTTON
+                                            echo "<input class='btn btn-custom form-control' type='submit' value='Edit' name='edit' id='edit'></form>";
+                                           // echo "</div>";
+
+
+                                            //DELETE BUTTON - set hidden inputs for each collum name
+                                           // echo "<div class='col-lg-6'>";
+                                            echo "<form method='post'>";
+                                            echo "<input type='hidden' name='ID' value=' ".$ID ." '> ";
+                                            echo "<input type='hidden' name='Title' value=' ". $Title." '> ";
+                                            echo "<input type='hidden' name='Info' value=' ".$Info ." '> ";
+                                            echo "<input type='hidden' name='Cat' value=' ". $Cat." '> ";
+                                            echo "<input type='hidden' name='Path' value=' ".$Path ." '> ";
+                                            echo "<input type='hidden' name='FileType' value=' ".$FileType ." '> ";
+
+                                            //DELETE BUTTON
+                                            echo "<input class='btn btn-custom form-control' type='submit' onclick='PDFdeleteJS()'  value='Delete' name='delete' id='delete'></form>";
+                                           // echo"</div>";
+
+
+
+
+
+                                            //close if currentpage = adminpanel.php
+                                        }
+                                        //close PDF::Check()
+                                    }
+			echo "		  </div>
+				</div>
+			  </div>
+		  </div>
+	</div>
+</div>";
+
+
                                         echo "<br>";
                                         echo "<br>";
 
-
-                                 //!!!!!!!!!!!code stops here when its not suposed to :@ !!!!!!!!!!!!
 
                                 //close if isset $row[$count]["ID"]
                                 }
@@ -394,6 +528,46 @@ error_reporting(E_ALL);
         //close function PDFList
         }
 
+    //***********************************************************************************************************************#
+    public static function View(){
+
+
+        //DELME
+        var_dump($_POST['ID']);
+        echo"<br>";
+        var_dump($_POST['Title']);
+        echo"<br>";
+        var_dump($_POST['Info']);
+        echo"<br>";
+        var_dump($_POST['Cat']);
+        echo"<br>";
+        var_dump($_POST['Path']);
+        echo"<br>";
+        var_dump($_POST['FileType']);
+        // /DELME
+
+        $FileType = $_POST['FileType'];
+        $FullPath = "PDF/".$_POST['Path'] ."." . $_POST['FileType'];
+
+        echo "<br>$FullPath";
+
+        if($FileType == "PDF"){
+            echo "its a PDF ";
+
+        }else
+        {
+            echo "<br>not a PDF";
+
+            if(file_exists($FullPath))
+                echo "file does exist";
+        //close if filetype is PDF
+        }
+
+    //close View function
+    }
+
+
+
 //close class PDF
     }
 
@@ -405,8 +579,27 @@ $PDF = new PDF;
 if(isset($_POST['Upload'])){
 
     PDF::insert();
-    //PDF::PDFList();
+
 }
+if(isset($_POST['delete'])){
+
+    PDF::Delete();
+
+}
+if(isset($_POST['edit'])){
+
+    PDF::Edit();
+
+}
+if(isset($_POST['file'])){
+
+    echo "howdy partner";
+     PDF::View();
+
+}
+
+
+
 
 
 
