@@ -532,35 +532,45 @@ global $currentFileType;
     public static function View(){
 
 
-        //DELME
-        var_dump($_POST['ID']);
-        echo"<br>";
-        var_dump($_POST['Title']);
-        echo"<br>";
-        var_dump($_POST['Info']);
-        echo"<br>";
-        var_dump($_POST['Cat']);
-        echo"<br>";
-        var_dump($_POST['Path']);
-        echo"<br>";
-        var_dump($_POST['FileType']);
-        // /DELME
 
+
+        $Path = $_POST['Path'];
         $FileType = $_POST['FileType'];
-        $FullPath = "PDF/".$_POST['Path'] ."." . $_POST['FileType'];
+        $FullPath = "PDF/".$Path.".".$FileType;
+        $trimPath = str_replace(' ', '', $FullPath);
+        $trimType = str_replace(' ', '', $FileType);
+        //set path for viewer
+        $viewPath = "../../../CMS/".$trimPath;
 
-        echo "<br>$FullPath";
+        // error here +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+        if($trimType == "PDF" or $trimType == "pdf"){
 
-        if($FileType == "PDF"){
-            echo "its a PDF ";
+            if(file_exists($trimPath)){
+                echo "<script type='text/javascript' language='Javascript'>window.open('../Assets/PDFViewer/web/viewer.html?file=$viewPath');</script>";
 
-        }else
+                //header("location: ");
+            }else
+            {
+                echo"no file Found";
+            //close if file exist
+            }
+
+
+
+        }elseif($trimType == "jpeg" or $trimType == "jpg")
         {
-            echo "<br>not a PDF";
 
-            if(file_exists($FullPath))
-                echo "file does exist";
-        //close if filetype is PDF
+            if(file_exists($trimPath))
+            {
+                echo "<script type='text/javascript' language='Javascript'>window.open('$trimPath');</script>";
+
+            }else
+            {
+                echo"no file Found";
+                //close if file exist
+            }
+
+            //close if filetype is PDF
         }
 
     //close View function
@@ -593,7 +603,6 @@ if(isset($_POST['edit'])){
 }
 if(isset($_POST['file'])){
 
-    echo "howdy partner";
      PDF::View();
 
 }

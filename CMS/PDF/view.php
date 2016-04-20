@@ -1,16 +1,8 @@
 <?php
-session_start();
-
-require_once "../Login/loginCheck.php";
 require_once "PDF.php";
-if(Check() == false)
-{
-    header("location:  ../login.php");
-}
-elseif(Check() == true) {
 
-    PDF::PassData();
+PDF::View()
 
-}
 ?>
 
+<iframe src='http://docs.google.com/viewer?url={<?php $trimPath ?>}&embedded=true' width='600' height='780' style='border: none;'></iframe>;
