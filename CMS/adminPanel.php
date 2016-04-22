@@ -18,6 +18,7 @@ require "Login/logoutFunc.php";
 require "PDF/PDF.php";
 require "Login/loginCheck.php";
 
+    //check if logged in
     if(Check() == false)
     {
         header("location:  login.php");
@@ -28,8 +29,6 @@ require "Login/loginCheck.php";
 echo "<br><br><br><br>";
 
         PDF::PDFList();
-
-
 
         //if the login is pressed
         if (isset($_POST['logout'])) {
@@ -61,24 +60,6 @@ echo "<br><br><br><br>";
 
         <!-- close form : logout button -->
 
-        <script type="text/javascript">
-
-            function PDFdeleteJS() {
-                if (confirm('Are you sure you want to delete this file?')) {
-                    //Make ajax call
-                    $.ajax({
-                        url: "PDF/PDF.php",
-                        type: "POST",
-                        data: {id : 5},
-                        dataType: "html",
-                        success: Delete(){
-                            alert("It was succesfully deleted!");
-                        }
-                    })
-
-                }
-            }
-        </script>
         <?php
 
     //close if logged in check

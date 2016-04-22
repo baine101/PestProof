@@ -21,13 +21,24 @@ if(Check() == false)
 }
 elseif(Check() == true) {
 
+    if(isset($_POST['logout'])){
 
+        //  EditFile::Edit();
+        logout();
+    }
+    if(isset($_POST['upload'])){
+
+        //  EditFile::Edit();
+        PDF::insert();
+    }
     ?>
-    <div class="col-lg-12"><p></p></div>
 
+    <div class='well'>
+        <h2 align='center'>Upload a File</h2></div>
 
+    <!-- input form for upload-->
     <div class="col-lg-6">
-        <form action="PDF/PDF.php" method="POST" enctype="multipart/form-data">
+        <form action="<?php $_SERVER['PHP_SELF'] ?>" method="POST" enctype="multipart/form-data">
             <div class="input-group">
                 <span class="input-group-addon" id="Title">Title</span>
                 <input class="form-control" type="text" name="Title" placeholder="Title"/>
@@ -46,7 +57,7 @@ elseif(Check() == true) {
 
                     <?php
                     //set variable as array produced from CatArrayF()
-                    $catArray = CatArrayF();
+                    $catArray = PDF::CatArrayF();
 
                     //count the 10 array objects
                     for ($a1 = 0; $a1 < 10; $a1++) {
@@ -67,11 +78,12 @@ elseif(Check() == true) {
             <br>
 
             <div class="input-group">
-                <span class="input-group-btn">
+                <span class="input-group-addon">
                     <span class="btn btn-primary btn-file">
                         Upload PDF&hellip; <input type="file" name="UpPDF" placeholder="Select PDF &hellip;"
                                                   accept="application/pdf, image/jpeg"/>
                     </span>
+
                 </span>
             </div>
 
@@ -79,11 +91,17 @@ elseif(Check() == true) {
             <br>
 
             <div class="input-group">
-                <input class="form-control" type="submit" name="Upload" value="Upload PDF">
-            </div>
+                <!-- form : upload button -->
+                <div class="input-group">
+                        <input class="form-control" type="submit" name="upload" value="Upload PDF">
+                </div>
 
+                <!-- close form : upload button -->
+            </div>
         </form>
     </div>
+    <!--close input form for upload-->
+
     <div class="col-lg-6">
         <!-- form : logout button -->
 
@@ -97,7 +115,11 @@ elseif(Check() == true) {
     </div>
     <br>
 
+
+
     <?php
+
+
     require "footer.php";
 }
 ?>

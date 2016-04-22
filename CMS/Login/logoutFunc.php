@@ -18,7 +18,7 @@
 
 
             //redirect to login page
-          //      header("location: login.php");
+            header("location: login.php");
             //close func logout
         }
 

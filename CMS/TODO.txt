@@ -1,7 +1,0 @@
-I'd get a list of everything on the CMS what needs to be done and work out a time estimate for them,
- then I'd  work out whats left to do for the design create estimates and then have a rough idea of whats left to be done.
-Do all the CMS stuff then the Designs,
- leave yourself a week period to test,
-give the url to a few people and get them to use it to see if it all works,
- if it does deliver it to him,
- if it doesnt you have a week to fix the problems
