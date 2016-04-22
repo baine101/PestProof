@@ -158,12 +158,14 @@ elseif(Check() == true) {
                                             $fileName = str_replace(" ", "_", $fileName);
                                             $UpPath = "PDF/Category/" . $CurrentCat . "/" . $fileName;
                                             $UpPath = str_replace(" ", "", $UpPath);
+                                            $fileNameNoExt = $targetWithoutExt = preg_replace('/\\.[^.\\s]{3,4}$/', '', $fileName);
+                                            $fileExt =  pathinfo($fileName,PATHINFO_EXTENSION);
 
                                             echo $UpPath;
 
                                             if(file_exists($UpPath)){
 
-                                            echo "<br><div class='alert alert-success'>
+                                            echo "<br><div class='alert alert-danger'>
                                         <strong>Error!</strong> The file name " . $fileName . " is allready in use, please change the file name.
                                         </div>";
 
@@ -189,10 +191,30 @@ elseif(Check() == true) {
 
                                                 //close if move uploaded file
                                             }
-                                        //close else if new file exists
+                                         //close else if new file exists
                                         }
-                             //close move file snippet
+                                            //update sql
 
+                                            $title = $_POST['Title'];
+                                            $info = $_POST['Info'];
+                                            $path = $CurrentCat."/";
+
+                                            try{
+                                                //connect to DB
+                                                $conn = new PDO("mysql:host=localhost;dbname=Pestproof", 'baine101', 'blink182');
+                                                // set the PDO error mode to exception
+                                                $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+                                                //update query
+                                                $SQLU = "UPDATE PDF SET Title = '$title', Info = '$info', Cat = '$CurrentCat',Path = '$UpPath', FileName = '$fileNameNoExt', FileType = '$fileExt' ";
+                                                $conn->exec($SQLU);
+                                                echo "updated SQL";
+
+                                                //close try
+                                            } catch(PDOException $e)
+                                            {
+                                                echo $e->getMessage();
+                                                return false;
+                                            }
 
 
 
@@ -209,7 +231,6 @@ elseif(Check() == true) {
                                     }elseif(empty($_FILES['UpFile']['name'])) {
                                         //^^^ if theirs no file uploaded just update the sql
 
-                                        echo "<br><br>no new file uploaded<br>";
 
 
                                         $title = $_POST['Title'];
