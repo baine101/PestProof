@@ -10,7 +10,6 @@
 session_start();
 
 require "dbConfig.php";
-require "nav.php";
 require "Login/loginFunc.php";
 require  "Login/loginCheck.php";
 
@@ -21,8 +20,7 @@ if(Check() == true)
 elseif(Check() == false) {
      // header("location: login.php");
 
-
-// if login button is pressed
+    // if login button is pressed
     if (isset($_POST['login'])) {
 
         //if their is values in the username and password
@@ -46,16 +44,11 @@ elseif(Check() == false) {
 //close if isset POST login  button
     }
 
-
-
-
+require "nav.php";
     ?>
 
-<br>
-    <br>
-    <br>
-
-    <!-- Start Login Panel -->
+        <!-- Start Login Panel -->
+    <div class="container">
     <div class='form-wrapper row'>
         <h1 class='header-fancy'> Pestproof Admin </h1>
         <!-- Left side column -->
@@ -63,7 +56,7 @@ elseif(Check() == false) {
         <!-- Middle Column -->
         <div class="col-md-4">
             <!-- Start of login form -->
-            <form action="login.php" method="post" class='login-form'>
+            <form action="<?php $_SERVER['PHP_SELF'] ?>" method="post" class='login-form'>
                 <div class="form-group">
                     <label for="username">Username</label>
                     <input type="text" class='form-control' name="username" id="username" placeholder="Admin Username">
@@ -80,6 +73,8 @@ elseif(Check() == false) {
         <!-- Right side column -->
         <div class="col-md-4"></div>
     </div>
+    </div>
+    <br>
     <!-- End Login Panel -->
 
 
@@ -88,6 +83,5 @@ elseif(Check() == false) {
 
 //close ifelse logged in check
 }
-
 require "footer.php"
 ?>

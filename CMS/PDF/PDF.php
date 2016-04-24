@@ -343,7 +343,7 @@ global $currentFileType;
             for ($a1 = 0; $a1 < 10; $a1++)
             {
                 //echo each category title HTML
-                echo" <div class='panel-custom'><div class='panel-heading'><h3 align='center' class='panel-title'>".$catArray[$a1][1]."</h3></div></div>";
+                echo"<div class='row'><div class='col-md-12'><div class='panel-custom'><div class='panel-heading'><h3 align='center' class='panel-title'>".$catArray[$a1][1]."</h3></div></div></div>";
 
                  //count the vars in inner array
                 for ($row = 1; $row < 2; $row++)
@@ -404,7 +404,7 @@ global $currentFileType;
 
 
                                     //  data-target='#". $catTitle."'    data-toggle='collapse'
-               echo "
+               echo "<div class='box col-md-3'>
 					  <div class='panel-body'>
 			            <form method='post'>
 			            <input class='btn btn-custom form-control' type='submit' aria-expanded='false' name='file' id='file' value='" . $row[$count]["Title"] . "'>
@@ -440,7 +440,6 @@ global $currentFileType;
 
 
                                             //EDIT BUTTON - set hidden inputs for each collum name
-                                          //  echo "<div class='col-lg-6'>";
                                             echo "<form action='Edit.php' method='GET'>";
                                             echo "<input type='hidden' name='CurrentID' value=' ".$ID ." '> ";
                                             echo "<input type='hidden' name='CurrentTitle' value=' ". $Title." '> ";
@@ -452,11 +451,10 @@ global $currentFileType;
 
                                             //EDIT BUTTON
                                             echo "<input class='btn btn-custom form-control' type='submit' value='Edit' name='edit' id='edit'></form>";
-                                           // echo "</div>";
+
 
 
                                             //DELETE BUTTON - set hidden inputs for each collum name
-                                           // echo "<div class='col-lg-6'>";
                                             echo "<form method='post'>";
                                             echo "<input type='hidden' name='ID' value=' ".$ID ." '> ";
                                             echo "<input type='hidden' name='Title' value=' ". $Title." '> ";
@@ -467,7 +465,7 @@ global $currentFileType;
 
                                             //DELETE BUTTON
                                             echo "<input class='btn btn-custom form-control' type='submit' onclick='PDFdeleteJS()'  value='Delete' name='delete' id='delete'></form>";
-                                           // echo"</div>";
+
 
 
 
@@ -479,23 +477,18 @@ global $currentFileType;
                                     }
 			echo "		  </div>
 				</div>
-			  </div>
-		  </div>
-	</div>
-</div>";
+            </div>
 
-
-                                        echo "<br>";
-                                        echo "<br>";
-
+";
 
                                 //close if isset $row[$count]["ID"]
                                 }
                             //close for count
                             }
-
+                        echo"</div>";
                         //close while $row
                         }
+                        echo"</div>";
                     } else {
                         echo "0 results";
                     }

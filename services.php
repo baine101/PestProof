@@ -7,34 +7,9 @@
  */
 require 'nav.php';
 ?>
-    <!-- headding image-->
-
-    <div  class="row section-head" id="Head">
-            <div id="myCarousel" class="carousel slide" data-ride="carousel">
-                <!-- Indicators -->
-                <ol class="carousel-indicators">
-                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                    <li data-target="#myCarousel" data-slide-to="1"></li>
-                </ol>
-
-                <!-- Wrapper for slides -->
-                <div class="carousel-inner" role="listbox">
-                    <div class="item active">
-                        <img src="../images/home-banner-01.jpg" class="img-rounded" alt="Pestproof" width=100% height= 100%>
-                    </div>
-
-                    <div class="item">
-                        <img src="../images/home-banner-02.jpg" class="img-rounded" alt="Pestproof" width=100% height= 100%>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-
-
-    <!-- heading -->
 
     <!-- section nav start -->
+    <div class="container">
         <div class="row section background-1 center-block" id="#nav">
             <br>
             <br>
@@ -101,10 +76,12 @@ require 'nav.php';
                 <!-- close row -->
             </div>
         </div>
+    </div>
     <!--close services section -->
 
 
 <!-- section   pest management  start -->
+<div class="container">
 <div class="row section background-2 center-block" id="pestMan">
     <div class="col-lg-12">
         <br>
@@ -112,8 +89,10 @@ require 'nav.php';
         <h2 class="text-center hr-heading">Pest Mangement</h2>
     </div>
 </div>
+</div>
 
     <!-- section inspection start -->
+<div class="container">
     <div class="row section background-1 center-block" id="inspection">
         <div class="col-lg-12">
             <br>
@@ -121,8 +100,10 @@ require 'nav.php';
             <h2 class="text-center hr-heading">Inspection Service</h2>
         </div>
     </div>
+</div>
 
     <!-- section Bird control start -->
+<div class="container">
     <div class="row section background-2 center-block" id="birdCon">
         <div class="col-lg-12">
             <br>
@@ -130,8 +111,10 @@ require 'nav.php';
             <h2 class="text-center hr-heading">Bird Control</>
         </div>
     </div>
+</div>
 
         <!-- section Rodent Control start -->
+<div class="container">
             <div class="row section background-1 center-block" id="rodentCon">
                <div class="col-lg-12">
                     <br>
@@ -139,8 +122,10 @@ require 'nav.php';
                     <h2 class="text-center hr-heading">Rodent Control</>
                </div>
             </div>
+</div>
 
         <!-- section Insect Control start -->
+<div class="container">
             <div class="row section background-2 center-block" id="insectCon">
                 <div class="col-lg-12"></div>
                     <br>
@@ -148,8 +133,10 @@ require 'nav.php';
                     <h2 class="text-center hr-heading">Insect Control</>
                 </div>
             </div>
+</div>
 
         <!-- section Plastic Strip curtains & Chain linked doors start -->
+<div class="container">
             <div class="row section background-1 center-block" id="plasticStrip">
                 <div class="col-lg-12">
                     <br>
@@ -157,8 +144,10 @@ require 'nav.php';
                     <h2 class="text-center hr-heading">Plastic Strip curtains & Chain linked doors</>
                 </div>
             </div>
+</div>
 
     <!-- section Fly Screen & Electric Fly Control Units start -->
+<div class="container">
         <div class="row section background-2 center-block" id="flyScreen">
             <div class="col-lg-12">
                 <br>
@@ -166,8 +155,10 @@ require 'nav.php';
                 <h2 class="text-center hr-heading">Fly Screen & Electric Fly Control Units</>
             </div>
         </div>
+</div>
 
     <!-- section Fumigation start -->
+<div class="container">
         <div class="row section background-1 center-block" id="fumigation">
             <div class="col-lg-12">
                 <br>
@@ -175,8 +166,10 @@ require 'nav.php';
                 <h2 class="text-center hr-heading">Fumigation</>
             </div>
         </div>
+</div>
 
     <!-- section Pest Awareness Training start -->
+<div class="container">
         <div class="row section background-2 center-block" id="pestAware">
            <div class="col-lg-12">
             <br>
@@ -184,8 +177,10 @@ require 'nav.php';
             <h2 class="text-center hr-heading">Pest Awareness Training</>
             </div>
         </div>
+</div>
 
     <!-- section Hygiene Services start -->
+<div class="container">
         <div class="row section background-1 center-block" id="hygine">
             <div class="col-lg-12">
                 <br>
@@ -193,6 +188,7 @@ require 'nav.php';
                 <h2 class="text-center hr-heading">Hygiene Services</>
             </div>
         </div>
+</div>
 
 
 

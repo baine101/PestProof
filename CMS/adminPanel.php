@@ -12,11 +12,13 @@
   //  session_start();
 
 
-require "nav.php";
-require "Login/loginFunc.php";
-require "Login/logoutFunc.php";
-require "PDF/PDF.php";
-require "Login/loginCheck.php";
+
+require_once "Login/loginFunc.php";
+require_once "Login/logoutFunc.php";
+require_once "PDF/PDF.php";
+require_once "Login/loginCheck.php";
+
+
 
     //check if logged in
     if(Check() == false)
@@ -26,38 +28,42 @@ require "Login/loginCheck.php";
     }
     elseif(Check() == true) {
 
-echo "<br><br><br><br>";
-
-        PDF::PDFList();
-
         //if the login is pressed
         if (isset($_POST['logout'])) {
 
-            logout();
+            $logoutC = new LogoutC();
+
+            $logoutC->logout();
 
             exit;
         }
+        require_once "nav.php";
+
+
+        PDF::PDFList();
+
+
 
         ?>
+        <div class="row">
+            <div class="col-sm-6">
 
-        <div class="col-lg-6 right">
-            <div class="input-group">
-                <form action="upload.php">
+            <div class="input-group center-block">
+                 <form action="upload.php">
                     <input class="form-control" type="submit" value="Upload" name="upload" id="uplaod">
                 </form>
-
-
             </div>
         </div>
-
+            <div class="col-sm-6 ">
         <!-- form : logout button -->
 
         <form action="<?php $_SERVER['PHP_SELF'] ?>" method="post">
-            <div class="input-group">
+            <div class="input-group center-block">
                 <input class="form-control" type="submit" name="logout" value="Logout">
             </div>
         </form>
-
+        </div>
+        </div>
         <!-- close form : logout button -->
 
         <?php

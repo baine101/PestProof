@@ -13,33 +13,10 @@ require 'controllers/enquiry.php';
 require 'nav.php';
 ?>
 
-<!-- headding image-->
 
-<div  class="row  section-head" id="Head">
-    <div id="myCarousel" class="carousel slide" data-ride="carousel">
-            <!-- Indicators -->
-            <ol class="carousel-indicators">
-                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                <li data-target="#myCarousel" data-slide-to="1"></li>
-            </ol>
-
-            <!-- Wrapper for slides -->
-            <div class="carousel-inner" role="listbox">
-                <div class="item active">
-                    <img src="images/home-banner-01.jpg" class="img-rounded" alt="Pestproof" width=100% height= 100%>
-                </div>
-
-                <div class="item">
-                    <img src="images/home-banner-02.jpg" class="img-rounded" alt="Pestproof" width=100% height= 100%>
-                </div>
-
-            </div>
-        </div>
-    </div>
-
-<!-- heading -->
 
 <!--services section start -->
+   <div class="container">
     <div class="row section background-1 Services">
         <div class="col-lg-12 centered">
             <h2 class="text-center hr-heading">Services</h2>
@@ -107,25 +84,21 @@ require 'nav.php';
             <br>
         </div>
     </div>
+   </div>
     <!--close services section -->
 
 
 
 
     <!--About section start -->
-    <div class="row section background-2" id="about">
-        <div class="col-lg-1 center-block">
+    <div class="section container">
+    <div class="row " id="about">
         </div>
-        <div class="col-lg-10 centered">
-            <br>
-            <br>
-            <br>
-
-
+        <div class="container col-lg-7 centered  background-2">
 
             <h2 class="text-center hr-heading">About Us</h2>
 
-            <p style="width: 90%" class="text-center">Formed over 18 years ago, Pestproof is a leading supplier of pest control and environmental services located in the North West.
+            <p style="width: 90%" class="text-center">Established in 1993, Pestproof is a leading supplier of pest control and environmental services located in the North West.
 
                 We offer the complete pest prevention package, tailoring each integrated pest management specification to meet the specific needs of our customers. We are full members of the BPCA and our flagship Elite Pest Management service is fully compliant with BRC audits for major retailers including Tesco and M&S. We are also accredited to the prestigious ISO 9001:2000 quality systems; proof of our commitment to providing an accountable and quality service for our customers.
 
@@ -135,12 +108,17 @@ require 'nav.php';
 
                 Our integrated pest management service is complemented by a range of specialist cleaning and washroom hygiene services. </p>
 
-            <div class="col-lg-12">
-
-
-            </div>
         </div>
         <!--close about section -->
+
+        <div class="col-lg-4 container background-1">
+            <h2 class="text-center hr-heading">Testimonial 1</h2>
+            <p style="width: 90%" class="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ipsum sed purus posuere fermentum ut non nisi. Sed eros tellus, porttitor sit amet velit at, mattis ultricies quam. Duis cursus eros mi, a mollis leo porttitor vitae. Etiam commodo risus ut lobortis venenatis. Phasellus scelerisque a turpis in dapibus. Proin a rutrum lorem. Nunc ligula purus, euismod et mauris ut,</p>
+
+
+        </div>
+
+
     </div>
 
 
@@ -150,12 +128,10 @@ require 'nav.php';
 
 
 <!-- cleaning section start-->
+    <div class="container">
 <div class="row section background-1" id="cleaning">
     <div class="col-lg-1 center-block"></div>
     <div class="col-lg-10 center-block">
-        <br>
-        <br>
-        <br>
 
         <h2 class="text-center hr-heading">Cleaning & Removals</h2>
         <div class="col-lg-12 text-center">
@@ -164,16 +140,16 @@ require 'nav.php';
         <div class="col-lg-12 text-center">
             <br>
             <p style="width: 90%" class="text-center">To complement our pest management and hygiene services, we also offer specialist cleaning and office cleaning services. We are equipped to carry out all types of cleaning including high-level cleaning in factories, silo servicing and silo house deep cleaning as well as a specialist team for void clearances. We are qualified to carry out work requiring specialised access equipment, such as abseiling techniques and Bosun’s chair work. To minimise disruption, our cleaning services can be carried out during shutdowns, weekends or through the night.</p>
-            <br>
+
 
         </div>
 
     </div>
 </div>
-
+    </div>
 
     <!--contact us title-->
-
+    <div class="container">
     <div class="row text-center background-2" id="contact">
         <h2 class="hr-heading">Contact Us</h2>
     </div>
@@ -231,6 +207,7 @@ require 'nav.php';
 
         <!--close enquiry form -->
 
+    </div>
     </div>
 
 

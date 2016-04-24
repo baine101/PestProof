@@ -8,11 +8,12 @@
 ini_set('display_errors', 'On');
 error_reporting(E_ALL);
 
-require "nav.php";
-require "Login/loginCheck.php";
-require "Login/loginFunc.php";
-require "Login/logoutFunc.php";
-require "PDF/PDF.php";
+
+require_once "Login/loginCheck.php";
+require_once "Login/loginFunc.php";
+require_once "Login/logoutFunc.php";
+require_once "PDF/PDF.php";
+require_once "nav.php";
 
 if(Check() == false)
 {
@@ -26,13 +27,8 @@ elseif(Check() == true) {
         //  EditFile::Edit();
         logout();
     }
-    if(isset($_POST['upload'])){
-
-        //  EditFile::Edit();
-        PDF::insert();
-    }
     ?>
-
+<div class="container">
     <div class='well'>
         <h2 align='center'>Upload a File</h2></div>
 
@@ -99,6 +95,13 @@ elseif(Check() == true) {
                 <!-- close form : upload button -->
             </div>
         </form>
+      <?php  if(isset($_POST['upload'])){
+
+        //  EditFile::Edit();
+        PDF::insert();
+        }
+    ?>
+
     </div>
     <!--close input form for upload-->
 
@@ -114,7 +117,7 @@ elseif(Check() == true) {
         <!-- close form : logout button -->
     </div>
     <br>
-
+</div>
 
 
     <?php
