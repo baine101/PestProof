@@ -44,7 +44,6 @@
             </div>
             <div class="col-sm-2 footer-text">
                 <p align="right"><b>© Copyright: Pestproof .<br> Website made by <a class="a-section" href="http://alexwaine.infamousmafia.co.uk">Alex Waine</a></b></p>
-                <p><a href="CMS/login.php">Site Admin</a></p>
             </div>
         </div>
 

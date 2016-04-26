@@ -47,6 +47,11 @@ elseif(Check() == false) {
 require "nav.php";
     ?>
 
+    <br>
+    <br>
+    <br>
+    <br>
+
         <!-- Start Login Panel -->
     <div class="container">
     <div class='form-wrapper row'>

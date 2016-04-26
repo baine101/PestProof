@@ -23,16 +23,33 @@ if(Check() == false)
 elseif(Check() == true) {
 
     if(isset($_POST['logout'])){
-
+        $logoutC = new LogoutC();
         //  EditFile::Edit();
-        logout();
+        $logoutC->logout();
     }
     ?>
+    <br>
+    <br>
+    <br>
 <div class="container">
-    <div class='well'>
-        <h2 align='center'>Upload a File</h2></div>
+    <div class='well col-lg-12'>
+        <h2 align='center'>Upload a File</h2>
+    </div>
+    <br>
+    </div>
+
+    <div class="container">
+    <?php  if(isset($_POST['upload'])){
+
+        //  EditFile::Edit();
+        PDF::insert();
+    }
+    ?>
+    </div>
+
 
     <!-- input form for upload-->
+    <div class="container">
     <div class="col-lg-6">
         <form action="<?php $_SERVER['PHP_SELF'] ?>" method="POST" enctype="multipart/form-data">
             <div class="input-group">
@@ -95,12 +112,7 @@ elseif(Check() == true) {
                 <!-- close form : upload button -->
             </div>
         </form>
-      <?php  if(isset($_POST['upload'])){
 
-        //  EditFile::Edit();
-        PDF::insert();
-        }
-    ?>
 
     </div>
     <!--close input form for upload-->

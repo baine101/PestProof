@@ -11,11 +11,6 @@ ini_set('display_errors', 'On');
 error_reporting(E_ALL);
 session_start();
 
-
-
-
-
-
 global $currentID;
 global $currentTitle;
 global $currentInfo;
@@ -48,7 +43,7 @@ global $currentFileType;
             ["HSEP", "Health & Safety and Environment Policy"],
             ["TrainDocs", "Training Documents"],
             ["Certs", "Certificates"],
-            ["Stationary", "Stationary"],
+            ["Elite", "Elite Paperwork"],
             ["PestSum", "Pesticide Summary"],
             ["PestFact", "Pesticide Facts Sheets"]
         );
@@ -89,7 +84,6 @@ global $currentFileType;
         $targetFile = $targetDir . basename($_FILES["UpPDF"]["name"]);
         $targetNoSpace = str_replace(' ', '_', $targetFile);
 
-        echo $targetNoSpace;
 
         $fileType = pathinfo($targetFile,PATHINFO_EXTENSION);
 
@@ -100,7 +94,7 @@ global $currentFileType;
 
                 // Allow certain file formats
                 if($fileType != "jpg" && $fileType != "jpeg" && $fileType != "PDF" && $fileType != "pdf") {
-                    echo "<br><div class='alert alert-danger'>
+                    echo "<div class='alert alert-danger'>
                                         <strong>Error!</strong>Sorry, only JPG, JPEG and PDF files are allowed.
                                      </div>";
 
@@ -130,7 +124,7 @@ global $currentFileType;
                 //uploads the file and cecks if the file uploaded
                 if (move_uploaded_file($_FILES["UpPDF"]["tmp_name"], $targetNoSpace)) {
                     //prints that the file has been uploaded to dir
-                    echo "<br><div class='alert alert-success'>
+                    echo "<div class='alert alert-success'>
                                         <strong>Success!</strong> The file " . basename($_FILES["UpPDF"]["name"]) . " has been uploaded to " . $_POST['Cat'] . "
                                         </div>";
                     $uploadOk = 1;
@@ -138,7 +132,7 @@ global $currentFileType;
                     return true;
 
                 } else {
-                    echo "<br><div class='alert alert-danger'>
+                    echo "<div class='alert alert-danger'>
                                         <strong>Error!</strong> Sorry, there was an error uploading your file.
                                      </div>";
                     $uploadOk = 0;
@@ -148,7 +142,7 @@ global $currentFileType;
                 }
                 }else
             {
-                echo "<br><div class='alert alert-danger'>
+                echo "<div class='alert alert-danger'>
                                         <strong>Error!</strong> Sorry, your file was not uploaded.
                                      </div>";
                 return false;
@@ -216,7 +210,7 @@ global $currentFileType;
 
                                // use exec() because no results are returned
                                $conn->exec($sql);
-                                 echo "<br><div class='alert alert-success'>
+                                 echo "<div class='alert alert-success'>
                                         <strong>Success!</strong> New record created successfully</div>";
                                echo "<br>";
 
@@ -225,7 +219,7 @@ global $currentFileType;
                            //close if PDF::upload = true
                            }else{
 
-                               echo "<br><div class='alert alert-danger'>
+                               echo "<div class='alert alert-danger'>
                                         <strong>Error!</strong> The file has not uploaded properly please retry.
                                      </div> ";
                             return false;
@@ -250,15 +244,6 @@ global $currentFileType;
         //close Upload Func
         }
 
-//***********************************************************************************************************************
-        public static function Update($ID, $CurrentCat, $CurrentFileName )
-        {
-
-            echo "ello";
-
-
-            //close Edit func
-        }
 //***********************************************************************************************************************
         public static function Delete()
         {
@@ -343,7 +328,7 @@ global $currentFileType;
             for ($a1 = 0; $a1 < 10; $a1++)
             {
                 //echo each category title HTML
-                echo"<div class='row'><div class='col-md-12'><div class='panel-custom'><div class='panel-heading'><h3 align='center' class='panel-title'>".$catArray[$a1][1]."</h3></div></div></div>";
+                echo"<br><br><br><div class='row center-block' id='".$catArray[$a1][0]."'><div class='col-md-12'><div class='panel-custom'><div class='panel-heading'><h3 align='center' class='panel-title'>".$catArray[$a1][1]."</h3></div></div></div>";
 
                  //count the vars in inner array
                 for ($row = 1; $row < 2; $row++)
@@ -403,11 +388,10 @@ global $currentFileType;
                                     $FileType = $row[$count]['FileType'];
 
 
-                                    //  data-target='#". $catTitle."'    data-toggle='collapse'
                echo "<div class='box col-md-3'>
 					  <div class='panel-body'>
 			            <form method='post'>
-			            <input class='btn btn-custom form-control' type='submit' aria-expanded='false' name='file' id='file' value='" . $row[$count]["Title"] . "'>
+			            <input class='btn btn-custom btn-primary form-control' type='submit' aria-expanded='false' name='file' id='file' value='" . $row[$count]["Title"] . "'>
 					    <input type='hidden' name='ID' value=' ".$ID ." '>
                         <input type='hidden' name='Title' value=' ". $Title." '>
                         <input type='hidden' name='Info' value=' ".$Info ." '>
@@ -440,6 +424,7 @@ global $currentFileType;
 
 
                                             //EDIT BUTTON - set hidden inputs for each collum name
+                                            echo "<div class='btn-group inline'>";
                                             echo "<form action='Edit.php' method='GET'>";
                                             echo "<input type='hidden' name='CurrentID' value=' ".$ID ." '> ";
                                             echo "<input type='hidden' name='CurrentTitle' value=' ". $Title." '> ";
@@ -450,7 +435,7 @@ global $currentFileType;
                                             echo "<input type='hidden' name='CurrentFileType' value=' ".$FileType ." '> ";
 
                                             //EDIT BUTTON
-                                            echo "<input class='btn btn-custom form-control' type='submit' value='Edit' name='edit' id='edit'></form>";
+                                            echo "<input class='btn btn-custom btn-primary' type='submit' value='Edit' name='edit' id='edit'></form>";
 
 
 
@@ -464,28 +449,21 @@ global $currentFileType;
                                             echo "<input type='hidden' name='FileType' value=' ".$FileType ." '> ";
 
                                             //DELETE BUTTON
-                                            echo "<input class='btn btn-custom form-control' type='submit' onclick='PDFdeleteJS()'  value='Delete' name='delete' id='delete'></form>";
-
-
-
-
-
+                                            echo "<input class='btn btn-custom btn-primary' type='submit' onclick='PDFdeleteJS()' value='Delete' name='delete' id='delete'></form>";
+                                            echo "</div>";
 
                                             //close if currentpage = adminpanel.php
                                         }
                                         //close PDF::Check()
                                     }
-			echo "		  </div>
+			echo "</div>
 				</div>
-            </div>
-
-";
-
+            </div>";
                                 //close if isset $row[$count]["ID"]
                                 }
                             //close for count
                             }
-                        echo"</div>";
+                        //echo"</div>";
                         //close while $row
                         }
                         echo"</div>";
@@ -520,7 +498,6 @@ global $currentFileType;
         //set path for viewer
         $viewPath = "../../../CMS/".$trimPath;
 
-        // error here +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
         if($trimType == "PDF" or $trimType == "pdf"){
 
             if(file_exists($trimPath)){

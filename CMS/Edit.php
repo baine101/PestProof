@@ -33,6 +33,12 @@ elseif(Check() == true) {
     $str = str_replace(" ","" ,$str);
 
     ?>
+    <br>
+    <br>
+    <br>
+ <br>
+
+<div id="wrapper"></div>
 
     <?php
     echo "<div class='center-block container'> <div class='well'>
@@ -43,14 +49,15 @@ elseif(Check() == true) {
 
     }
     ?>
+<br>
 
 
-
+<div class="row">
     <div class="container">
 
         <div class="row">
         <!-- form input for edit -->
-        <div class="col-lg-6">
+        <div class="col-lg-6 background-1">
 
             <form action="PDF/EditClass.php" method="POST" enctype="multipart/form-data">
                 <div class="input-group">
@@ -79,33 +86,30 @@ elseif(Check() == true) {
                 <br>
 
                 <div class="input-group">
-                    <input class="form-control" type="submit" name="Update" value="Update PDF">
+                    <input class="btn-custom btn-primary form-control" type="submit" name="Update" value="Update PDF">
                 </div>
             </form>
+
             <!-- close form input for edit-->
 
 
 
 
         </div>
-            <div class="col-lg-2 sidebar-outer">
-                <div class="sidebar">
-
-                    <div class="well">
+            <div class="col-lg-2">
+                    <div class="well well-lg"> <div class="btn-group">
                         <form action="<?php $_SERVER['PHP_SELF'] ?>" method="POST">
-                            <div class="input-group">
-                                <input class="form-control" type="submit" name="logout" value="Logout">
-                            </div>
+                                <input class="btn-custom btn-primary form-control" type="submit" name="logout" value="Logout">
+                                <input class="btn-custom btn-primary form-control" type="submit" name="cancel" value="Cancel">
                         </form>
                     </div>
-
-                </div>
+                    </div>
             </div>
 
     </div>
     </div>
-
-
+    </div>
+<br>
 
 
     <?php

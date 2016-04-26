@@ -1,7 +1,9 @@
 
-
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="../Assets/bootstrap/js/jquery.js"></script>
     <script src="../Assets/bootstrap/js/toTop.jquery.js"></script>
     <script src="../Assets/bootstrap/js/scroll.jquery.js"></script>
@@ -15,6 +17,10 @@
 </head>
 <body>
 
+
+
+
+<!--NAV START-->
 <nav class="navbar navbar-default navbar-fixed-top nav-divider">
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -51,7 +57,22 @@
                     <li><a href="../index.php?#cleaning">Cleaning & Removals</a></li>
                     <li><a href="../index.php?#contact">Contact</a></li>
                     <li><a href="http://www.pestproofhs.co.uk/">Health & Safety</a></li>
-                    <li><a href="landing.php">Health & Safety CMS</a></li>
+                <li class="dropdown">
+                    <a href="landing.php" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Health & Safety<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="landing.php?#SSOF">Safe Systems of Work </a></li>
+                        <li><a href="landing.php?#COSHH">COSHH Information</a></li>
+                        <li><a href="landing.php?#MSDS">Manufactures Safety Data Sheets</a></li>
+                        <li><a href="landing.php?#Insurance">Insurance Documents</a></li>
+                        <li><a href="landing.php?#HSEP">Health & Safety and Environmental Policy</a></li>
+                        <li><a href="landing.php?#TrainDocs">Training Documents</a></li>
+                        <li><a href="landing.php?#Certs">Certificates</a></li>
+                        <li><a href="landing.php?#Elite">Elite Paperwork</a></li>
+                        <li><a href="landing.php?#PestSum">Pest Summary</a></li>
+                        <li><a href="landing.php?#PestFact">Pest Fact Sheets</a></li>
+
+                    </ul>
+                </li>
 
 
             </ul>
@@ -66,11 +87,12 @@
     </div><!-- /.container-fluid -->
 
 </nav>
+
 <!-- END OF NAV BAR-->
 
+
 <!-- headding image-->
-<div class="container">
-    <div  class="section-head" id="Head">
+    <div  class="container section-head" id="Head">
         <div id="myCarousel" class="carousel slide" data-ride="carousel">
             <!-- Indicators -->
             <ol class="carousel-indicators">
@@ -91,7 +113,5 @@
             </div>
         </div>
     </div>
-</div>
-
 <!-- heading -->
 

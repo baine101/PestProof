@@ -1,0 +1,9 @@
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^infamousmafia.co.uk [NC,OR]
+RewriteCond %{HTTP_HOST} ^www.infamousmafia.co.uk [NC]
+# 404 page
+ErrorDocument 404 /notfound.php
+# disable directory browsing
+Options -Indexes
+# prevent folder listing
+IndexIgnore *
