@@ -13,7 +13,7 @@ require_once "Login/loginCheck.php";
 require_once "Login/loginFunc.php";
 require_once "Login/logoutFunc.php";
 require_once "PDF/PDF.php";
-require_once "nav.php";
+
 
 if(Check() == false)
 {
@@ -27,16 +27,42 @@ elseif(Check() == true) {
         //  EditFile::Edit();
         $logoutC->logout();
     }
+    if(isset($_POST['cancel'])){
+        header("location: adminPanel.php");
+    }
+
+    //if the login is pressed
+    if (isset($_POST['logout'])) {
+
+        $logoutC = new LogoutC();
+
+        $logoutC->logout();
+
+        exit;
+    }
+        require_once "nav.php";
     ?>
+
+    <nav class="floating-menu">
+        <h3 class="text-center">Admin Panel</h3>
+        <form action="adminPanel.php" method="post">
+            <input class="btn-submit btn-primary form-control" type="submit" value="Cancel" name="cancel" id="cancel">
+        </form>
+        <form action="<?php $_SERVER['PHP_SELF'] ?>" method="post">
+            <div class="center-block">
+                <input class="btn-submit btn-primary form-control" type="submit" name="logout" value="Logout">
+            </div>
+        </form>
+
+    </nav>
+    <main>
     <br>
-    <br>
-    <br>
-<div class="container">
+
+    <div class="box2 container">
     <div class='well col-lg-12'>
         <h2 align='center'>Upload a File</h2>
     </div>
     <br>
-    </div>
 
     <div class="container">
     <?php  if(isset($_POST['upload'])){
@@ -48,23 +74,25 @@ elseif(Check() == true) {
     </div>
 
 
+<div class="row">
     <!-- input form for upload-->
     <div class="container">
-    <div class="col-lg-6">
+    <div class="col-lg-10 center-block text-center">
+
         <form action="<?php $_SERVER['PHP_SELF'] ?>" method="POST" enctype="multipart/form-data">
-            <div class="input-group">
+            <div class="col-lg-offset-5 input-group">
                 <span class="input-group-addon" id="Title">Title</span>
                 <input class="form-control" type="text" name="Title" placeholder="Title"/>
             </div>
             <br>
-            <div class="input-group">
+            <div class="col-lg-offset-5 input-group">
                 <span class="input-group-addon" id="Info">Information</span>
-                <input class="form-control" type="text" name="Info" placeholder="Info"/>
+                <textarea class="form-control" type="text" name="Info" placeholder="Info"/></textarea>
             </div>
             <br>
 
 
-            <div class="input-group">
+            <div class="col-lg-offset-5 input-group">
                 <span class="input-group-addon" id="Cat">Category</span>
                 <select class="form-control" name="Cat">
 
@@ -90,11 +118,10 @@ elseif(Check() == true) {
 
             <br>
 
-            <div class="input-group">
-                <span class="input-group-addon">
-                    <span class="btn btn-primary btn-file">
-                        Upload PDF&hellip; <input type="file" name="UpPDF" placeholder="Select PDF &hellip;"
-                                                  accept="application/pdf, image/jpeg"/>
+            <div class="col-lg-offset-2 input-group">
+                <span class="input-group-btn">
+                    <span class="btn btn-default">
+                        Upload PDF&hellip; <input type="file" name="UpPDF" placeholder="Select PDF &hellip;" accept="application/pdf, image/jpeg"/>
                     </span>
 
                 </span>
@@ -103,38 +130,23 @@ elseif(Check() == true) {
 
             <br>
 
-            <div class="input-group">
-                <!-- form : upload button -->
-                <div class="input-group">
-                        <input class="form-control" type="submit" name="upload" value="Upload PDF">
-                </div>
+            <div class="col-lg-offset-5 input-group">
 
+                        <input class="btn-submit form-control" type="submit" name="upload" value="Upload PDF">
                 <!-- close form : upload button -->
             </div>
         </form>
-
+    </div>
 
     </div>
     <!--close input form for upload-->
-
-    <div class="col-lg-6">
-        <!-- form : logout button -->
-
-        <form action="<?php $_SERVER['PHP_SELF'] ?>" method="post">
-            <div class="input-group">
-                <input class="form-control" type="submit" name="logout" value="Logout">
-            </div>
-        </form>
-
-        <!-- close form : logout button -->
-    </div>
-    <br>
 </div>
 
 
+</div>
+</main>
+
     <?php
-
-
     require "footer.php";
 }
 ?>

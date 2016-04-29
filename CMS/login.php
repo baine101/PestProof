@@ -47,15 +47,11 @@ elseif(Check() == false) {
 require "nav.php";
     ?>
 
-    <br>
-    <br>
-    <br>
-    <br>
 
         <!-- Start Login Panel -->
     <div class="container">
-    <div class='form-wrapper row'>
-        <h1 class='header-fancy'> Pestproof Admin </h1>
+    <div class='box2 row'>
+        <h1 class='text-center header-fancy'> Pestproof Admin </h1>
         <!-- Left side column -->
         <div class="col-md-4"></div>
         <!-- Middle Column -->
@@ -63,14 +59,16 @@ require "nav.php";
             <!-- Start of login form -->
             <form action="<?php $_SERVER['PHP_SELF'] ?>" method="post" class='login-form'>
                 <div class="form-group">
-                    <label for="username">Username</label>
+                    <span class="input-group-addon" id="usename">Username :
                     <input type="text" class='form-control' name="username" id="username" placeholder="Admin Username">
+                    </span>
                 </div>
                 <div class="form-group">
-                    <label for="password">Password</label>
+                    <span class="input-group-addon" id="password">Password :
                     <input type="password" class='form-control' name="password" id="password" placeholder="Admin Password">
+                    </span>
                 </div>
-                <input type="submit" class="btn btn-default" value="Login" name="login" id="login"/>
+                <input type="submit" class="form-control btn-submit" value="Login" name="login" id="login"/>
             </form>
             <!-- End of login form -->
 

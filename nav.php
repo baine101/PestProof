@@ -2,7 +2,17 @@
 <html lang="en">
 <head>
 
+    <title>PestProof - Pest Control & Cleaning Services </title>
+    <meta charset="UTF-8">
+    <meta name="description" content="At Pestproof We provide quality services">
+    <meta name="keywords" content="wasps,flies,pest,cleaning,Pest,ants,Ants,Nest,nest,cleaning,Control,services,pest,Safety,service,Pestproof,Health,customers,quality,Fly,management,Services,mice,Mice,Rodent,rodent,squirrel">
+    <meta name="author" content="PestProof">
+    <meta name="copyright" content="PestProof">
+    <meta name="web_author" content="Alex Waine">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
     <script src="../Assets/bootstrap/js/jquery.js"></script>
     <script src="../Assets/bootstrap/js/toTop.jquery.js"></script>
     <script src="../Assets/bootstrap/js/scroll.jquery.js"></script>
@@ -85,7 +95,7 @@
 
 <!-- headding image-->
 
-    <div  class="container section-head" id="Head">
+    <div  class="section-head" id="Head">
         <div id="myCarousel" class="carousel slide" data-ride="carousel">
             <!-- Indicators -->
             <ol class="carousel-indicators">
@@ -107,3 +117,5 @@
         </div>
     </div>
 <!-- heading -->
+
+

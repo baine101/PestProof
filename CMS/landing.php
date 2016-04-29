@@ -6,8 +6,9 @@
  * Time: 00:14
  */
 
-require "PDF/PDF.php";
+
 require "nav.php";
+require "PDF/PDF.php";
 ?>
 <div class="container">
 

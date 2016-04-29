@@ -37,15 +37,19 @@ require_once "Login/loginCheck.php";
 
             exit;
         }
+
+        if(isset($_POST['upload'])){
+
+            header("location: upload.php");
+        }
         require_once "nav.php";
 
 ?>
         <body>
-
         <nav class="floating-menu">
             <h3 class="text-center">Admin Panel</h3>
-            <form action="upload.php">
-                <input class="btn-submit btn-primary form-control" type="submit" value="Upload" name="upload" id="uplaod">
+            <form action="<?php $_SERVER['PHP_SELF'] ?>" method="post">
+                <input class="btn-submit btn-primary form-control" type="submit" value="Upload" name="upload" id="upload">
             </form>
             <form action="<?php $_SERVER['PHP_SELF'] ?>" method="post">
                 <div class="center-block">
@@ -54,15 +58,14 @@ require_once "Login/loginCheck.php";
             </form>
 
         </nav>
-            <main>
-<br>
 
+
+
+                <div class="container box2">
         <?php
         PDF::PDFList();
 
-
-
-        ?>
+        ?></div>
 
 
 

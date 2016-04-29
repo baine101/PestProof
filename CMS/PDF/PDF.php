@@ -5,10 +5,6 @@
  * Date: 12/04/16
  * Time: 16:07
  */
-
-
-ini_set('display_errors', 'On');
-error_reporting(E_ALL);
 session_start();
 
 global $currentID;
@@ -424,7 +420,7 @@ global $currentFileType;
 
 
                                             //EDIT BUTTON - set hidden inputs for each collum name
-                                            echo "<div class='btn-group inline'>";
+                                            echo "<div>";
                                             echo "<form action='Edit.php' method='GET'>";
                                             echo "<input type='hidden' name='CurrentID' value=' ".$ID ." '> ";
                                             echo "<input type='hidden' name='CurrentTitle' value=' ". $Title." '> ";
@@ -435,7 +431,7 @@ global $currentFileType;
                                             echo "<input type='hidden' name='CurrentFileType' value=' ".$FileType ." '> ";
 
                                             //EDIT BUTTON
-                                            echo "<input class='btn btn-custom btn-primary' type='submit' value='Edit' name='edit' id='edit'></form>";
+                                            echo "<input  class='btn btn-custom list-inline' type='submit' value='Edit' name='edit' id='edit'></form>";
 
 
 
@@ -449,7 +445,7 @@ global $currentFileType;
                                             echo "<input type='hidden' name='FileType' value=' ".$FileType ." '> ";
 
                                             //DELETE BUTTON
-                                            echo "<input class='btn btn-custom btn-primary' type='submit' onclick='PDFdeleteJS()' value='Delete' name='delete' id='delete'></form>";
+                                            echo "<input class='btn btn-custom list-inline' type='submit' onclick='PDFdeleteJS()' value='Delete' name='delete' id='delete'></form>";
                                             echo "</div>";
 
                                             //close if currentpage = adminpanel.php

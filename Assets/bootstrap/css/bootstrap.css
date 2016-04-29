@@ -1088,6 +1088,7 @@ textarea {
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
+  width: 50%  ;
 }
 a {
   color: #18bc9c;
@@ -1095,7 +1096,7 @@ a {
 }
 a:hover,
 a:focus {
-  color: #18bc9c;
+  color: #000000;
   text-decoration: underline;
 }
 a:focus {
@@ -1472,7 +1473,7 @@ blockquote {
   padding: 10.5px 21px;
   margin: 0 0 21px;
   font-size: 18.75px;
-  border-left: 5px solid #ecf0f1;
+  border-left: 5px solid #0b804f;
 }
 blockquote p:last-child,
 blockquote ul:last-child,
@@ -1496,7 +1497,7 @@ blockquote .small:before {
 blockquote.pull-right {
   padding-right: 15px;
   padding-left: 0;
-  border-right: 5px solid #ecf0f1;
+  border-right: 5px solid #0b804f;
   border-left: 0;
   text-align: right;
 }
@@ -3049,9 +3050,9 @@ fieldset[disabled] a.btn {
   pointer-events: none;
 }
 .btn-default {
-  color: #ffffff;
-  background-color: #95a5a6;
-  border-color: #95a5a6;
+  color: #000000;
+  background-color: #0b804f;
+  border-color: #0b804f;
 }
 .btn-default:focus,
 .btn-default.focus {
@@ -3180,7 +3181,7 @@ fieldset[disabled] .btn-primary.active {
   color: #2c3e50;
   background-color: #ffffff;
 }
-.btn-success {
+  .btn-success {
   color: #ffffff;
   background-color: #18bc9c;
   border-color: #18bc9c;
@@ -3944,7 +3945,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   color: #2c3e50;
   width:30%;
   text-align: center;
-  background-color: #71f194;
+  background-color: #00a45e;
   border: 1px solid #dce4ec;
   border-radius: 4px;
 }
@@ -7016,7 +7017,7 @@ input:focus {
   line-height: 10px;
 }
 .well {
-  background-color: #10f177;
+  background-color: #00a45f;
   -webkit-box-shadow: none;
   box-shadow: none;
 }

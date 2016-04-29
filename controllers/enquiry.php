@@ -18,7 +18,7 @@ class Contact{
             $msg = wordwrap($body, 70);
 
             //send mail
-            mail('info@pestproof.co.uk', $_POST['name'], $msg, "FROM : " . $_POST['name']);
+            mail('awaine93@hotmail.co.uk', $_POST['name'], $msg, "FROM : " . $_POST['name']);
             mail($_POST['email'],'Enquiry Recived' , 'Your enquiry has been recived and we will reply as soon as possible.' );
 
             echo "<div class='btn-submit'>Your enquiry has been sent , We will be in touch shortly</div>";

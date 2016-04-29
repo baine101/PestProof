@@ -16,19 +16,16 @@ require_once 'nav.php';
     <!-- section nav start -->
     <div class="container">
         <div class="row section background-1 center-block" id="#nav">
-            <br>
-            <br>
-            <div class="col-lg-1"></div>
-            <div class="row"><div class="col-lg-10"><h1 class="text-center hr-heading">Services</h1><br><p class="center-block text-center">We offer a range of commercial pest management solutions and environmental services, tailored to meet the specific requirements of our customers and their sectors</p>
-                    <br> </div></div>
-            <div class="row center-block">
+            <div class="col-lg-offset-1 col-lg-10"><h1 class="text-center hr-heading">Services</h1><br><p class="center-block text-center">We offer a range of commercial pest management solutions and environmental services, tailored to meet the specific requirements of our customers and their sectors</p>
+                    <br> </div>
+            <div class="center-block">
 
 
 
                 <!-- ********* services blocks -->
                 <div class="center-block">
 
-                    <div style="background-image: url(images/jumboxes/services/poison.jpg); height: 10em; width: 13em" class="col-lg-2 jumbotron-services">
+                    <div style="background-image: url(images/jumboxes/services/baitbox.JPG); height: 10em; width: 13em" class="col-lg-2 jumbotron-services">
                         <p class="content-box"><a href="services.php?#pestMan" class="a-section">Pest Management</a></p>
                     </div>
 
@@ -91,13 +88,13 @@ require_once 'nav.php';
 
     <!--About section start -->
     <div class="section container">
-    <div class="row " id="about">
+    <div class="row visible-lg-inline-block " id="about">
         </div>
         <div class="container col-lg-7 centered  background-2">
 
             <h2 class="text-center hr-heading">About Us</h2>
 
-            <p style="width: 90%" class="text-center">Established in 1993, Pestproof is a leading supplier of pest control and environmental services located in the North West.
+            <p style="width: 100%" class="text-center">Established in 1993, Pestproof is a leading supplier of pest control and environmental services located in the North West.
 
                 We offer the complete pest prevention package, tailoring each integrated pest management specification to meet the specific needs of our customers. We are full members of the BPCA and our flagship Elite Pest Management service is fully compliant with BRC audits for major retailers including Tesco and M&S. We are also accredited to the prestigious ISO 9001:2000 quality systems; proof of our commitment to providing an accountable and quality service for our customers.
 
@@ -112,8 +109,8 @@ require_once 'nav.php';
 
         <div class="col-lg-4 container background-1">
             <blockquote class="blockquote-reverse">
-            <h2 class="text-center hr-heading">Testimonial 1</h2>
-            <p style="width: 90%" class="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ipsum sed purus posuere fermentum ut non nisi. Sed eros tellus, porttitor sit amet velit at, mattis ultricies quam. Duis cursus eros mi, a mollis leo porttitor vitae. Etiam commodo risus ut lobortis venenatis. Phasellus scelerisque a turpis in dapibus. Proin a rutrum lorem. Nunc ligula purus, euismod et mauris ut,</p>
+            <h2 class="text-center hr-heading">Rochdale Boroughwide Housing</h2>
+            <p style="width: 100%" class="text-center">"We have worked with Pestproof for their outstanding quality services, profesional approach  and friendly team."</p>
             <footer><cite title="Source Title">Philip Thompson , Rochdale Boroughwide Housing</cite></footer>
             </blockquote>
 
@@ -132,10 +129,10 @@ require_once 'nav.php';
     <div class="section container">
 <div class="row section" id="cleaning">
 
-    <div class="col-lg-3 container background-2">
+    <div class="col-lg-3 background-2">
         <blockquote>
             <h2 class="text-center hr-heading">Testimonial 2</h2>
-            <p style="width: 90%" class="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ipsum sed purus posuere fermentum ut non nisi. Sed eros tellus, porttitor sit amet velit at, mattis ultricies quam. Duis cursus eros mi, a mollis leo porttitor vitae. Etiam commodo risus ut lobortis venenatis. Phasellus scelerisque a turpis in dapibus. Proin a rutrum lorem. Nunc ligula purus, euismod et mauris ut,</p>
+            <p style="width: 100%" class="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ipsum sed purus posuere fermentum ut non nisi. Sed eros tellus, porttitor sit amet velit at, mattis ultricies quam. Duis cursus eros mi, a mollis leo porttitor vitae. Etiam commodo risus ut lobortis venenatis. Phasellus scelerisque a turpis in dapibus. Proin a rutrum lorem. Nunc ligula purus, euismod et mauris ut,</p>
             <footer><cite title="Source Title">Some Randomer , Random Organisation of Nowt</cite></footer>
         </blockquote>
 
@@ -147,11 +144,11 @@ require_once 'nav.php';
 
         <h2 class="text-center hr-heading">Cleaning & Waste Removals</h2>
         <div class="text-center">
-            <img style="border-radius: 25px;width: 60%;height: 45%" src="images/Before&after.jpg">
+            <img style="width: 60%;height: 45%" src="images/Before&after.jpg">
         </div>
         <div class="text-center">
             <br>
-            <p style="width: 90%" class="text-center">To complement our pest management and hygiene services, we also offer specialist cleaning and office cleaning services. We are equipped to carry out all types of cleaning including high-level cleaning in factories, silo servicing and silo house deep cleaning as well as a specialist team for void clearances. We are qualified to carry out work requiring specialised access equipment, such as abseiling techniques and Bosun’s chair work. To minimise disruption, our cleaning services can be carried out during shutdowns, weekends or through the night.</p>
+            <p style="width: 100%" class="text-center">To complement our pest management and hygiene services, we also offer specialist cleaning and office cleaning services. We are equipped to carry out all types of cleaning including high-level cleaning in factories, silo servicing and silo house deep cleaning as well as a specialist team for void clearances. We are qualified to carry out work requiring specialised access equipment, such as abseiling techniques and Bosun’s chair work. To minimise disruption, our cleaning services can be carried out during shutdowns, weekends or through the night.</p>
 
 
         </div>
@@ -180,6 +177,7 @@ require_once 'nav.php';
                 Failsworth<br>
                 Manchester<br>
                 M35 9BY <br></address>
+                Freephone: 0800 298 6251<br>
                 Telephone: 0161 684 9451<br>
                 Fax: 0161 947 0485
 
@@ -189,11 +187,11 @@ require_once 'nav.php';
 
         <!--Enquiry form  -->
 
-        <div class="col-lg-6 text-center">
+        <div class="col-lg-6 center-block">
 
             <h3 class="hr-heading">Enquiry</h3>
 
-
+<div class="col-lg-offset-2 text-center">
             <form action="controllers/enquiry.php" method="post">
                 <div class="input-group">
                         <span class="input-group-addon" id="name">Name :</span>
@@ -210,8 +208,8 @@ require_once 'nav.php';
                 <div class="input-group">
                 <span class="input-group-addon" id="message">Enquiry :</span>
                 <input type="text" class="form-control" name="message" placeholder="Enquiry" aria-describedby="message">
-                </div>
-                <input class="btn-submit" type="submit" name="submit" value="Submit Enquiry">
+                </div></div><br>
+                <input class="form-control btn-submit" type="submit" name="submit" value="Submit Enquiry">
             </form>
             <?php
             if(isset($_POST['submit'])){
@@ -220,8 +218,8 @@ require_once 'nav.php';
             } ?>
 
 
-        </div>
 
+    </div>
         </div>
     </div>
     <!--close contact us section -->

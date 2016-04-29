@@ -24,7 +24,7 @@ require 'nav.php';
                 <!-- ********* services blocks -->
                 <div class="center-block">
 
-                <div style="background-image: url(images/jumboxes/services/poison.jpg); height: 10em; width: 13em" class="col-lg-2 jumbotron-services">
+                <div style="background-image: url(images/jumboxes/services/baitbox.JPG); height: 10em; width: 13em" class="col-lg-2 jumbotron-services">
                     <p class="content-box"><a href="services.php?#pestMan" class="a-section">Pest Management</a></p>
                 </div>
 
@@ -92,7 +92,7 @@ require 'nav.php';
         <p class="text-center">Our pest management services combine a number of proactive proofing and control methods to ensure that your premises are protected to the highest levels. Our flagship Elite Pest Management service is fully BRC compliant and suitable for those requiring the very best service levels, particularly those operating in the food industry. We carry out regular site inspections at a service level to suit you and provide quick and detailed reports using the latest electronic reporting system. If an urgent problem should occur, we will respond quickly to your call with a 24 hour Emergency call out service available at no extra cost. Our survey and quotation service is FREE of charge.</p>
     </div>
     <div class="col-lg-5">
-        <img class="serviceimg" src="images/jumboxes/services/poison.jpg">
+        <img class="serviceimg" src="images/jumboxes/services/baitbox.JPG">
     </div>
 </div>
 </div>
@@ -152,6 +152,7 @@ require 'nav.php';
                 </div>
             <div class="col-lg-4">
                 <img class="serviceimg" src="images/jumboxes/services/insect.jpg">
+            </div>
             </div>
             </div>
 

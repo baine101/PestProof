@@ -92,7 +92,7 @@
 
 
 <!-- headding image-->
-    <div  class="container section-head" id="Head">
+    <div  class="section-head" id="Head">
         <div id="myCarousel" class="carousel slide" data-ride="carousel">
             <!-- Indicators -->
             <ol class="carousel-indicators">
@@ -114,4 +114,3 @@
         </div>
     </div>
 <!-- heading -->
-
