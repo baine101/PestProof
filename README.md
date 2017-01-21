@@ -1,5 +1,2 @@
 README
-
-# Options +FollowSymLinks
-# RewriteEngine on
-# RewriteRule (.*) http://www.infamousmafia.co.uk/$1 [R=301,L]
+Pestproof Bespoke website re-build with CMS to upload needed certificates and documents
